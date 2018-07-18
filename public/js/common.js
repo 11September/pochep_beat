@@ -1,40 +1,17 @@
-$(function() {
+$(document).ready(function() {
+    /* ======= ScrollTo ======= */
+    $('a.scrollto').on('click', function(e){
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
+        //store hash
+        var target = this.hash;
 
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
+        e.preventDefault();
 
-	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
+        $('body').scrollTo(target, 800, {offset: -50, 'axis':'y'});
+        //Collapse mobile menu after clicking
+        if ($('.navbar-collapse').hasClass('in')){
+            $('.navbar-collapse').removeClass('in').addClass('collapse');
+        }
 
-	};
-
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
-
+    });
 });
