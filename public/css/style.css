@@ -153,19 +153,55 @@ section h2:before {
 
 /* === contacts === */
 .contacts{
-    min-height: 900px;
+    padding-bottom: 150px;
+}
+
+.contacts h2{
+    margin-bottom: 90px;
+}
+
+.contacts-wrapper-info{
+    padding-left: 20%;
+}
+
+.contacts-info-item{
+    margin-bottom: 60px;
+    color: #212529;
+}
+
+.contacts-item-title{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contacts-info-item i{
+    color: #E41E28;
+    font-size: 30px;
+}
+
+.contacts-item-info{
+    margin: 0;
+    font-size: 26px;
 }
 
 .contacts-wrapper-map{
+    position: relative;
     width:100%;
     height:100%;
     background-image: url("../img/air.jpg");
+    background-size: 100% 100%;
+}
+
+.contacts-wrapper-info-absolute{
+    position: absolute;
+    top: 0;
+    left:30%;
 }
 
 
 /* === raider === */
 .raider{
-    padding-top: 120px;
     padding-bottom: 240px;
     background: rgba(255,255,255,1);
     background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.94) 18%, rgba(12,44,44,0.68) 100%);

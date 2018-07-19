@@ -2377,28 +2377,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <div class="contacts-wrapper-info">
                     <div class="contacts-info-item">
-                        <p>Management</p>
-                        <p><i></i> mail@mail.mail</p>
+                        <p class="contacts-item-title">Management</p>
+                        <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
                     </div>
                     <div class="contacts-info-item">
-                        <p>Press</p>
-                        <p><i></i> mail@mail.mail</p>
+                        <p class="contacts-item-title">Press</p>
+                        <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
                     </div>
                     <div class="contacts-info-item">
-                        <p>Телефон</p>
-                        <p><i></i> mail@mail.mail</p>
+                        <p class="contacts-item-title">Телефон</p>
+                        <p class="contacts-item-info"><i class="fa fa-phone"></i> mail@mail.mail</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-8">
                 <div class="contacts-wrapper-map">
-                    <div class="contacts-wrapper-info-right">
+                    <div class="contacts-wrapper-info-absolute">
                         <div class="contacts-info-item">
-                            <p>Телефон</p>
-                            <p><i></i> mail@mail.mail</p>
+                            <p class="contacts-item-title">Fan Mail</p>
+                            <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
                         </div>
                     </div>
                 </div>
