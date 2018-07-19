@@ -2295,16 +2295,37 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
-<div class="intro">
-
+<div id="intro">
+    {{--<img src="{{ asset('img/pb_1920x1800_back.jpg') }}" width="100%" height="auto" alt="" />--}}
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
+                    <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
+                </a>
+            </div>
+            <ul id="ul" class="nav navbar-nav">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <div id="title-pic" class="title_icon">
+                <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt="" /></a>
+            </div>
+        </div>
+    </nav>
 </div>
 
-<section class="photos">
+<section id="photos">
 
 </section>
 
@@ -2451,7 +2472,29 @@
 </script>
 
 <!-- Load Scripts -->
-<script>var scr = {
+<script>var scr = {"scripts":[
+        {"src" : "{{ asset('js/jquery-3.3.1.min.js') }}", "async" : false},
+        {"src" : "{{ asset('js/jquery-migrate-3.0.0.min.js') }}", "async" : false},
+        {"src" : "{{ asset('js/bootstrap.min.js') }}", "async" : false},
+        {"src" : "{{ asset('js/jquery.scrollTo.min.js') }}", "async" : false},
+        {"src" : "js/common.js", "async" : false}
+    ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+
+    function hide_navbar_my(){
+        document.getElementById('ul').style.display = 'block';
+        document.getElementById('navbar').style.background = 'black';
+        document.getElementById('title-pic').style.display = 'block';
+        document.getElementById('cross').style.display = 'block';
+        document.getElementById('burger').style.display = 'none';
+    }
+    function cross_click() {
+        document.getElementById('ul').style.display = 'none';
+        document.getElementById('navbar').style.background = 'transparent';
+        document.getElementById('title-pic').style.display = 'none';
+        document.getElementById('cross').style.display = 'none';
+        document.getElementById('burger').style.display = 'block';
+    }
+ var scr = {
         "scripts": [
             {"src": "{{ asset('js/modernizr.js') }}", "async": false},
             {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
