@@ -49,6 +49,10 @@ button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
+.fill-text{
+    color: #594CA9;
+    text-transform: uppercase;
+}
 
 section h2{
     color: #212529;
@@ -110,6 +114,29 @@ section h2:before {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0c2c2c', GradientType=0 );
 }
 
+.raider h2{
+    margin-bottom: 100px;
+}
+
+.raider-wrapper-image{
+    position: relative;
+    padding: 0 5%;
+}
+
+.raider-wrapper-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.raider-download-pdf{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    color: #594CA9;
+    font-size: 120px;
+}
+
 .raider-wrapper-download{
     width:100%;
     height:100%;
@@ -117,9 +144,52 @@ section h2:before {
 }
 
 .raider-wrapper-download p{
+    margin-top: 0;
     text-align: left;
     width:100%;
 }
+
+.raider-download-download{
+    color: #000;
+    font-size: 27px;
+    margin-bottom: 40px;
+}
+
+p.raider-download-head-text{
+    color: #594CA9;
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.raider-download-knowing{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.raider-download-wrapper-button{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 96px;
+    width: 100%;
+}
+
+.raider-download-button{
+    padding: 30px 95px;
+    height: 96px;
+    width:400px;
+    background-color: #594CA9;
+    border-radius: 56px;
+    font-size: 34px;
+    color: #FFFFFF;
+    text-decoration: none;
+    clear: both;
+    float: left;
+    text-align: left;
+}
+
+
 
 footer{
     height: 300px;

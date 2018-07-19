@@ -2394,14 +2394,18 @@
             <div class="col-md-6">
                 <div class="raider-wrapper-image">
                     <img src="{{ asset('img/raider_left.png') }}" alt="raider_left.png">
+                    <div class="raider-download-pdf">PDF</div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="raider-wrapper-download flex-center">
-                    <p>Загрузите наш</p>
-                    <p>технический рейдер</p>
-                    <p>для ознакомления с группой POCHEP BEAT</p>
-                    <a href="#">Скачать PDF</a>
+                    <p class="raider-download-download">Загрузите наш</p>
+                    <p class="raider-download-head-text">технический рейдер</p>
+                    <p class="raider-download-knowing">для ознакомления с группой <span class="fill-text">POCHEP BEAT</span></p>
+
+                    <div class="raider-download-wrapper-button">
+                        <a href="#" class="raider-download-button">Скачать PDF</a>
+                    </div>
                 </div>
             </div>
         </div>
