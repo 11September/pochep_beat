@@ -49,3 +49,67 @@ button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 
+/* fonts including*/
+
+@font-face {
+    font-family: "Segoe UI Semibold";
+    src: url("../fonts/SegoeUI/SegoeUIRegular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Italic";
+    src: url("../fonts/SegoeUI/SegoeUIItalic.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("../fonts/SegoeUI/SegoeUIBold.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Segoe UI Bold";
+}
+a,li{
+    font-family: "Segoe UI Semibold";
+}
+p{
+    font-family: "Segoe UI Italic";
+}
+
+/* end of including fonts*/
+#intro {
+    background: url("../img/pb_1920x1800_back.jpg") top left no-repeat;
+    min-height: 1800px;
+    background-size: 100% auto;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-inverse .navbar-nav>li>a{color: white;font-weight: bold;}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover
+{
+    color: red;
+    background-color: transparent;
+    border-bottom: 1px solid red;
+}
+#ul, #cross{
+    display: none;
+}
+#photos {
+    width: 100%;
+    min-height: 500px;
+}
+.title_icon{
+    float:right;
+    margin: 15px 0;
+    display: none;
+}
