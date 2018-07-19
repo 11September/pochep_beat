@@ -2302,34 +2302,40 @@
 
 <body>
 
-<div id="intro">
-    {{--<img src="{{ asset('img/pb_1920x1800_back.jpg') }}" width="100%" height="auto" alt="" />--}}
-    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
-                    <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
-                </a>
-            </div>
-            <ul id="ul" class="nav navbar-nav">
-                <li><a href="#intro">Home</a></li>
-                <li><a href="#photos">Photos</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Page 3</a></li>
-            </ul>
-            <div id="title-pic" class="title_icon">
-                <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt="" /></a>
-            </div>
+{{--<img src="{{ asset('img/pb_1920x1800_back.jpg') }}" width="100%" height="auto" alt="" />--}}
+<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
+                <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
+            </a>
         </div>
-    </nav>
+        <ul id="ul" class="nav navbar-nav text-center">
+            <li><a href="#intro">About</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#tracks">Tracks</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#pdf">Tech Render (pdf)</a></li>
+        </ul>
+        <div id="title-pic" class="title_icon">
+            <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt="" /></a>
+        </div>
+    </div>
+</nav>
+
+<div id="intro">
+    <div class="about">
+
+    </div>
 </div>
 
 <section id="photos">
 
 </section>
 
-<section class="videos">
+<section id="videos" class="videos">
     <div class="container">
         <div id="slider" class="flexslider">
             <ul class="slides">
@@ -2368,11 +2374,11 @@
     </div>
 </section>
 
-<section class="tracks">
+<section id="tracks" class="tracks">
 
 </section>
 
-<section class="contacts">
+<section id="contacts" class="contacts">
     <h2>Контакты</h2>
 
     <div class="container">
@@ -2407,7 +2413,7 @@
     </div>
 </section>
 
-<section class="raider">
+<section id="pdf" class="raider">
     <h2>Технический рейдер</h2>
 
     <div class="container">
