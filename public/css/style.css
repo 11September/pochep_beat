@@ -90,7 +90,88 @@ p{
     background-size: 100% auto;
 }
 .about{
+    padding-top: 57%;
+}
+.about2{
+    /*min-height: 500px;*/
+    /*background: red;*/
+    background: linear-gradient(#ffffffbf, white, white);
+}
+.about2 .col-md-10 p {
+    margin: 50px 0;
+}
+.about2 .col-md-1{height: auto;}
+.about2 .col-md-1 .text-rotate{
+    margin: 100px 0 0 0;
+}
+.about2 .col-md-1 .text-rotate span{
+    color: red;
+}
+.pics-intro{
+    display: flex;
+    justify-content: center;
+}
+.row.pics-intro .col-md-3:hover .overlay{
+    opacity: 1;
+}
+.overlay .text{
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+}
+.overlay .text .left-border_o .bot-border_o h2 {
+    position: absolute;
 
+}
+.left-border_o{
+    border-bottom: 1px solid white;
+    height: 100%;
+    margin-right: 70%;
+}
+.bot-border_o {
+    position: absolute;
+    border-left: 1px solid white;
+    top: 50%;
+    bottom: 4%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 5px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ce0a0678;
+}
+
+.row.pics-intro .col-md-3
+{
+    margin: 3px;
+    padding: 0;
+}
+.about-pics{
+    padding-bottom: 50px;
+}
+.text-rotate{
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+
+    /* IE */
+    -ms-transform: rotate(-90deg);
+
+    /* Opera */
+    -o-transform: rotate(-90deg);
+
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 .navbar.navbar-inverse.navbar-fixed-top {
     background-color: transparent;

@@ -2312,7 +2312,7 @@
             </a>
         </div>
         <ul id="ul" class="nav navbar-nav text-center">
-            <li><a href="#intro">About</a></li>
+            <li><a href="#about2">About</a></li>
             <li><a href="#photos">Photos</a></li>
             <li><a href="#videos">Videos</a></li>
             <li><a href="#tracks">Tracks</a></li>
@@ -2327,6 +2327,86 @@
 
 <div id="intro">
     <div class="about">
+        <div class="row about2" id="about2">
+            <div class="col-md-1">
+                <h2 class="text-rotate"><span>О</span> НАС</h2>
+            </div>
+            <div class="col-md-10">
+                <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по молчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много
+                    версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в
+                    качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-
+                    страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много
+                    версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="container about-pics">
+                <div class="row pics-intro">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pics-intro">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive" />
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <div class="overlay">
+                            <div class="text text-center">
+                                <h2>Robert Barateon</h2>
+                                <p>Участник коллектива
+                                    Бла-Бла, бла-бла, бла-бла</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
 
     </div>
 </div>
