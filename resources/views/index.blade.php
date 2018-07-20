@@ -2306,10 +2306,10 @@
 <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
+            <div class="navbar-brand">
                 <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
                 <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
-            </a>
+            </div>
         </div>
         <ul id="ul" class="nav navbar-nav text-center">
             <li><a href="#about2">About</a></li>
@@ -2328,10 +2328,10 @@
 <div id="intro">
     <div class="about">
         <div class="row about2" id="about2">
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <h2 class="text-rotate"><span>О</span> НАС</h2>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-8">
                 <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по молчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много
                     версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в
                     качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-
@@ -2339,7 +2339,7 @@
                     версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
                 </p>
             </div>
-            <div class="col-md-1"></div>
+            <div class="col-md-2"></div>
             <div class="container about-pics">
                 <div class="row pics-intro">
                     <div class="col-md-3 col-sm-6 col-xs-12">
@@ -2412,7 +2412,21 @@
 </div>
 
 <section id="photos">
-
+    <div class="container">
+        <div class="row">
+            <h2>Photos</h2>
+        </div>
+        <div class="row">
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+        </div>
+        <div class="row">
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+        </div>
+    </div>
 </section>
 
 <section id="videos" class="videos">
