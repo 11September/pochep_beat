@@ -31,4 +31,10 @@ $(document).ready(function() {
         slideshow: false,
         sync: "#carousel"
     });
+
+    $('#tracks-slider').flexslider({
+        animation: "slide",
+        controlsContainer: $(".custom-controls-container"),
+        customDirectionNav: $(".custom-navigation a")
+    });
 });

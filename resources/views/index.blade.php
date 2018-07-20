@@ -2455,7 +2455,35 @@
 </section>
 
 <section id="tracks" class="tracks">
+    <h2>Треки</h2>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tracks-wrapper-slider">
+                    <div id="tracks-slider" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                            </li>
+                            <li>
+                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                            </li>
+                            <li>
+                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="custom-navigation">
+                        <a href="#" class="flex-prev">Prev</a>
+                        <div class="custom-controls-container"></div>
+                        <a href="#" class="flex-next">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="contacts" class="contacts">
