@@ -249,8 +249,61 @@ section h2:before {
 
 .videos{
     min-height: 500px;
-    background-color: blue;
 }
+
+.video-wrapper-slider{
+    padding: 0 10%;
+}
+
+/* === tracks === */
+.track-wrapper-image{
+    padding: 0 15%;
+}
+
+.wrapper-track-item .raider-download-head-text{
+    color: #E41E28;
+}
+
+.listen-wrapper-button{
+    width: 100%;
+    height: 46px;
+}
+
+.listen-wrapper-button .jab-container{
+    padding: 6px 30px;
+    height: 46px;
+    /*width: 400px;*/
+    background-color: #E41E28;
+    border-radius: 56px;
+    font-size: 30px;
+    color: #FFFFFF;
+    text-decoration: none;
+    clear: both;
+    float: left;
+    text-align: left;
+}
+
+.jab-container .jab-inline-el{
+    height: 30px;
+    margin-right: 24px;
+}
+
+.listen-wrapper-button .jab-container .jab-icon{
+    width:30px;
+    height:30px;
+}
+
+.jab-icon .jab-svg-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.jab-icon .jab-svg-icon svg{
+    padding-bottom: 0 !important;
+    height: auto !important;
+    overflow: visible;
+}
+/* === tracks === */
 
 /* === contacts === */
 .contacts{
