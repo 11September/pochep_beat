@@ -1,17 +1,21 @@
-$(document).ready(function() {
+$(document).ready(function () {
     /* ======= ScrollTo ======= */
-    $('a.scrollto').on('click', function(e){
+    $('a.scrollto').on('click', function (e) {
 
         //store hash
         var target = this.hash;
 
         e.preventDefault();
 
-        $('body').scrollTo(target, 800, {offset: -50, 'axis':'y'});
+        $('body').scrollTo(target, 800, {offset: -50, 'axis': 'y'});
         //Collapse mobile menu after clicking
-        if ($('.navbar-collapse').hasClass('in')){
+        if ($('.navbar-collapse').hasClass('in')) {
             $('.navbar-collapse').removeClass('in').addClass('collapse');
         }
+    });
+
+    $('#burger').on('click', function (e) {
+        e.preventDefault();
     });
 
     $('#carousel').flexslider({
@@ -33,8 +37,13 @@ $(document).ready(function() {
     });
 
     $('#tracks-slider').flexslider({
+        itemHeight: 450,
+        animationLoop: false,
+        slideshow: false,
         animation: "slide",
-        controlsContainer: $(".custom-controls-container"),
-        customDirectionNav: $(".custom-navigation a")
+        // controlsContainer: $(".custom-controls-container"),
+        // customDirectionNav: $(".custom-navigation a")
     });
+
+    $('.sample').jabradoodle();
 });

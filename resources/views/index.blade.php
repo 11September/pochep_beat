@@ -17,10 +17,6 @@
 
     <!-- Bootstrap Grid v4.1.0 -->
     <style>
-        @-ms-viewport {
-            width: device-width
-        }
-
         html {
             box-sizing: border-box;
             -ms-overflow-style: scrollbar
@@ -2295,8 +2291,27 @@
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        function hide_navbar_my() {
+            document.getElementById('ul').style.display = 'block';
+            document.getElementById('navbar').style.background = 'black';
+            document.getElementById('title-pic').style.display = 'block';
+            document.getElementById('cross').style.display = 'block';
+            document.getElementById('burger').style.display = 'none';
+        }
+
+        function cross_click() {
+            document.getElementById('ul').style.display = 'none';
+            document.getElementById('navbar').style.background = 'transparent';
+            document.getElementById('title-pic').style.display = 'none';
+            document.getElementById('cross').style.display = 'none';
+            document.getElementById('burger').style.display = 'block';
+        }
+    </script>
 
 </head>
 
@@ -2308,7 +2323,7 @@
         <div class="navbar-header">
             <div class="navbar-brand">
                 <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
-                <i id="cross" class="fa fa-close" style="color:red" onclick="cross_click()"></i>
+                <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
             </div>
         </div>
         <ul id="ul" class="nav navbar-nav text-center">
@@ -2320,7 +2335,7 @@
             <li><a href="#pdf">Tech Render (pdf)</a></li>
         </ul>
         <div id="title-pic" class="title_icon">
-            <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt="" /></a>
+            <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt=""/></a>
         </div>
     </div>
 </nav>
@@ -2433,40 +2448,47 @@
 </section>
 
 <section id="videos" class="videos">
+    <h2>Видео</h2>
+
     <div class="container">
-        <div id="slider" class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <!-- items mirrored twice, total of 12 -->
-            </ul>
-        </div>
-        <div id="carousel" class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <li>
-                    <img src="img/pb_1920x1800_back2-min.jpg"/>
-                </li>
-                <!-- items mirrored twice, total of 12 -->
-            </ul>
+        <div class="video-wrapper-slider">
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <!-- items mirrored twice, total of 12 -->
+                </ul>
+            </div>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <li>
+                        <img src="img/pb_1920x1800_back2-min.jpg"/>
+                    </li>
+                    <!-- items mirrored twice, total of 12 -->
+                </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -2481,21 +2503,78 @@
                     <div id="tracks-slider" class="flexslider">
                         <ul class="slides">
                             <li>
-                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                                <div class="wrapper-track-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="track-wrapper-image">
+                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                     alt="raider_left.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="raider-wrapper-download flex-center">
+                                                <p class="raider-download-download">16 июля 2018</p>
+                                                <p class="raider-download-head-text">One More Night</p>
+                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+
+                                                <div class="listen-wrapper-button">
+                                                    <div class="sample" data-duration="31" data-showprogressbar="false"
+                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                                <div class="wrapper-track-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="track-wrapper-image">
+                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                     alt="raider_left.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="raider-wrapper-download flex-center">
+                                                <p class="raider-download-download">16 июля 2018</p>
+                                                <p class="raider-download-head-text">One More Night</p>
+                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+
+                                                <div class="listen-wrapper-button">
+                                                    <div class="sample" data-duration="31" data-showloader="false"
+                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li>
-                                <img src="img/pb_1920x1800_back2-min.jpg"/>
+                                <div class="wrapper-track-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="track-wrapper-image">
+                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                     alt="raider_left.png">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="raider-wrapper-download flex-center">
+                                                <p class="raider-download-download">16 июля 2018</p>
+                                                <p class="raider-download-head-text">One More Night</p>
+                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+
+                                                <div class="listen-wrapper-button">
+                                                    <div class="sample" data-duration="31" data-showprogressbar="false"
+                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
-                    </div>
-
-                    <div class="custom-navigation">
-                        <a href="#" class="flex-prev">Prev</a>
-                        <div class="custom-controls-container"></div>
-                        <a href="#" class="flex-next">Next</a>
                     </div>
                 </div>
             </div>
@@ -2553,7 +2632,8 @@
                 <div class="raider-wrapper-download flex-center">
                     <p class="raider-download-download">Загрузите наш</p>
                     <p class="raider-download-head-text">технический рейдер</p>
-                    <p class="raider-download-knowing">для ознакомления с группой <span class="fill-text">POCHEP BEAT</span></p>
+                    <p class="raider-download-knowing">для ознакомления с группой <span
+                                class="fill-text">POCHEP BEAT</span></p>
 
                     <div class="raider-download-wrapper-button">
                         <a href="#" class="raider-download-button">Скачать PDF</a>
@@ -2592,6 +2672,7 @@
     //    loadCSS("_header.css");
     loadCSS("{{ asset('css/style.css') }}");
     loadCSS("{{ asset('css/flexslider.css') }}");
+    loadCSS("{{ asset('css/jabradoodle.css') }}");
 </script>
 
 <!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
@@ -2601,29 +2682,8 @@
 </script>
 
 <!-- Load Scripts -->
-<script>var scr = {"scripts":[
-        {"src" : "{{ asset('js/jquery-3.3.1.min.js') }}", "async" : false},
-        {"src" : "{{ asset('js/jquery-migrate-3.0.0.min.js') }}", "async" : false},
-        {"src" : "{{ asset('js/bootstrap.min.js') }}", "async" : false},
-        {"src" : "{{ asset('js/jquery.scrollTo.min.js') }}", "async" : false},
-        {"src" : "js/common.js", "async" : false}
-    ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
-
-    function hide_navbar_my(){
-        document.getElementById('ul').style.display = 'block';
-        document.getElementById('navbar').style.background = 'black';
-        document.getElementById('title-pic').style.display = 'block';
-        document.getElementById('cross').style.display = 'block';
-        document.getElementById('burger').style.display = 'none';
-    }
-    function cross_click() {
-        document.getElementById('ul').style.display = 'none';
-        document.getElementById('navbar').style.background = 'transparent';
-        document.getElementById('title-pic').style.display = 'none';
-        document.getElementById('cross').style.display = 'none';
-        document.getElementById('burger').style.display = 'block';
-    }
- var scr = {
+<script>
+    var scr = {
         "scripts": [
             {"src": "{{ asset('js/modernizr.js') }}", "async": false},
             {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
@@ -2631,7 +2691,8 @@
             {"src": "{{ asset('js/bootstrap.min.js') }}", "async": false},
             {"src": "{{ asset('js/jquery.scrollTo.min.js') }}", "async": false},
             {"src": "{{ asset('js/jquery.flexslider-min.js') }}", "async": false},
-            {"src": "js/common.js", "async": false}
+            {"src": "{{ asset('js/jabradoodle.js') }}", "async": false},
+            {"src": "{{ asset('js/common.js') }}", "async": false}
         ]
     };
     !function (t, n, r) {
