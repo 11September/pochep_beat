@@ -19,7 +19,7 @@ b,strong{font-weight:bold}
 blockquote{margin:1em 40px}
 dfn{font-style:italic}
 mark{background:#ff0;color:#000}
-p,pre{margin:1em 0}
+p,pre{margin: 1em 0;}
 code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
 pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}
 q{quotes:none}
@@ -95,13 +95,15 @@ p{
 .about2{
     /*min-height: 500px;*/
     /*background: red;*/
+    width: 100%;
+    margin: 0;
     background: linear-gradient(#ffffffbf, white, white);
 }
 .about2  p {
     margin: 50px 0;
 }
 .about2 .col-md-2 .text-rotate{
-    margin: 100px 0 0 0;
+    margin: 35px 0 0 0;
 }
 .about2 .col-md-2 .text-rotate span{
     color: red;
@@ -142,7 +144,7 @@ p{
     bottom: 0;
     left: 0;
     color: white;
-    padding: 5px;
+    padding: 0;
     right: 0;
     height: 100%;
     width: 100%;
@@ -150,7 +152,27 @@ p{
     transition: .5s ease;
     background-color: #ce0a0678;
 }
-
+.right-top-border{
+    float: right;
+    margin: -5% 5% 0 0;
+    height: 22%;
+    width: 25%;
+    z-index: 0;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+.left-bottom-border{
+    height: 25%;
+    margin-top:-5%;
+    z-index: 0;
+    width: 22%;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+}
+.bot-right-text{
+    margin-top: -10px;
+    float: right;
+}
 .row.pics-intro .col-md-3
 {
     margin: 3px;
@@ -158,6 +180,15 @@ p{
 }
 .about-pics{
     padding-bottom: 50px;
+}
+.about-pics .pics-intro .overlay .text.text-center h2{
+    text-decoration: underline;
+    margin: 10% 0 0 0;
+    z-index: 10;
+}
+.about-pics .pics-intro .overlay .text.text-center p{
+    margin: 0;
+    z-index: 10;
 }
 .text-rotate{
     /* Safari */
@@ -196,9 +227,12 @@ p{
 .img-sqr{
     text-align: center;
     overflow: hidden;
-    max-height: 319.984px;
+    max-height: 319px;
     padding: 0!important;
     z-index: 0;
+}
+.top-left-text{
+    padding: 5px;
 }
 .img-sqr:hover{
     transform: scale(1.1, 1.1);
@@ -388,11 +422,22 @@ p.raider-download-head-text{
     float: left;
     text-align: left;
 }
+#burger, #cross{
+    font-size: 25px;
+}
 
-
-
+footer h2{
+    margin: 0 auto;
+    font-size: 25px;
+    color: white;
+}
+footer img{
+    margin: 0 auto;
+}
 footer{
-    height: 300px;
+    text-align: center;
+    min-height: 300px;
+    padding: 50px 0 0 0;
     background-color: #000000;
 }
 
@@ -410,4 +455,28 @@ footer{
     font-size: 20pt;
     font-weight: bold;
     color: #FFFFFF;
+    /*margin-bottom: 0;*/
+}
+#about2 .col-md-12 .col-md-8{
+    margin: 0 auto;
+
+}
+@media (max-width: 991px){
+    #about2 .col-md-12 .col-md-2{
+        display: none;
+    }
+    .about-pics .pics-intro .overlay .text.text-center h2{
+        font-size: 15px;
+    }
+    .about-pics .pics-intro .overlay .text.text-center p{
+        font-size: 10px;
+    }
+}
+@media (max-width: 767px){
+    .left-bottom-border{
+        margin-top: 9%;
+    }
+    .about2{
+        background: linear-gradient(#ffffffbf, white, white, white, white, white);
+    }
 }

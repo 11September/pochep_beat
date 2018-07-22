@@ -2308,7 +2308,7 @@
         <div class="navbar-header">
             <div class="navbar-brand">
                 <i id="burger" class="fa fa-bars" style="color:red" onclick="hide_navbar_my()"></i>
-                <i id="cross" class="fa fa-times" style="color:red" onclick="cross_click()"></i>
+                <i id="cross" class="fa fa-close" style="color:red" onclick="cross_click()"></i>
             </div>
         </div>
         <ul id="ul" class="nav navbar-nav text-center">
@@ -2325,31 +2325,37 @@
     </div>
 </nav>
 
-<div id="intro">
+<div id="intro" class="intro">
     <div class="about">
         <div class="row about2" id="about2">
-            <div class="col-md-2">
-                <h2 class="text-rotate"><span>О</span> НАС</h2>
+            <div class="col-md-12">
+                <div class="col-md-2">
+                    <h2 class="text-rotate"><span>О</span> НАС</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>Мы играем музыку, которая нравится в первую очередь нам. Музыку, которую мы способны почувствовать, как свою, и донести эти чувства до зрителя.
+                        Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и проблемах.
+                        Наша музыка изменит ритм вашей жизни.
+                        Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую мелодию превратить в шквал эмоций и зажечь ваши сердца.
+                        Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года 2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».
+                    </p>
+                </div>
+                <div class="col-md-2"></div>
             </div>
-            <div class="col-md-8">
-                <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по молчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много
-                    версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в
-                    качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-
-                    страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много
-                    версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).
-                </p>
-            </div>
-            <div class="col-md-2"></div>
             <div class="container about-pics">
                 <div class="row pics-intro">
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
+                        <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
                         <div class="overlay">
+                            <div class="top-left-text">Балет</div>
+                            <div class="right-top-border"></div>
                             <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
+                                <h2>Яценко Мария</h2>
+                                {{--<p></p>--}}
+                                <div class="left-bottom-border"></div>
+                                <div class="bot-right-text">Хореограф</div>
                             </div>
+
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
@@ -2406,25 +2412,22 @@
                     </div>
                 </div>
             </div>
-            </div>
-
+        </div>
     </div>
 </div>
 
-<section id="photos">
+<section id="photos" class="photos">
+    <h2>Фото</h2>
     <div class="container">
         <div class="row">
-            <h2>Photos</h2>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/2.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/3.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/4.png')}}" class=""/></div>
         </div>
         <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
-        </div>
-        <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/ph1.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/5.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/6.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/7.jpg')}}" class=""/></div>
         </div>
     </div>
 </section>
@@ -2562,11 +2565,9 @@
 </section>
 
 <footer>
-    <div class="footer-logo flex-center">
-        <p><img src="{{ asset('img/PB_WHITE.png') }}" alt="PB_WHITE"></p>
-    </div>
-    <div class="footer-wrapper-copyright flex-center">
-        <p class="footer-copyright">Copyright 2018</p>
+    <div class="col-md-12">
+        <div class="row"><img src="{{asset('img/PB_WHITE.png')}}" class="img-responsive"/></div>
+        <div class="row"><h2>Copyright 2018</h2></div>
     </div>
 </footer>
 
