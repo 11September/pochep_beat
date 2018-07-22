@@ -2366,7 +2366,7 @@
                             <div class="right-top-border"></div>
                             <div class="text text-center">
                                 <h2>Яценко Мария</h2>
-                                {{--<p></p>--}}
+                                <p>Участник коллектива "POCHEP BEAT"</p>
                                 <div class="left-bottom-border"></div>
                                 <div class="bot-right-text">Хореограф</div>
                             </div>
