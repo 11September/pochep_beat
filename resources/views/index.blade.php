@@ -2450,7 +2450,6 @@
                         <li>
                             <img src="img/pb_1920x1800_back2-min.jpg"/>
                         </li>
-                        <!-- items mirrored twice, total of 12 -->
                     </ul>
                 </div>
             </div>
@@ -2466,80 +2465,56 @@
                     <div class="tracks-wrapper-slider">
                         <div id="tracks-slider" class="flexslider">
                             <ul class="slides">
-                                <li>
-                                    <div class="wrapper-track-item">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="track-wrapper-image">
-                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                         alt="raider_left.png">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="raider-wrapper-download flex-center">
-                                                    <p class="raider-download-download">16 июля 2018</p>
-                                                    <p class="raider-download-head-text">One More Night</p>
-                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
 
-                                                    <div class="listen-wrapper-button">
-                                                        <div class="sample" data-duration="31"
-                                                             data-showprogressbar="false"
-                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                @foreach($tracks as $track)
+                                    <li>
+                                        <div class="wrapper-track-item">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="track-wrapper-image">
+                                                        @if($track->preview)
+                                                            <img src="{{ asset('storage/' . $track->preview ) }}"
+                                                                 alt="raider_left.png">
+                                                        @else
+                                                            <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                                 alt="raider_left.png">
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="raider-wrapper-download flex-center">
+                                                        @if($track->date)
+                                                            <p class="raider-download-download">{{ $track->date }}</p>
+                                                        @endif
+
+                                                        @if($track->name)
+                                                            <p class="raider-download-head-text">{{ $track->name }}</p>
+                                                        @endif
+
+                                                        @if($track->author)
+                                                            <p class="raider-download-knowing">{{ $track->author }}</p>
+                                                        @endif
+
+                                                        @if($track->track && !$track->link)
+                                                            <div class="listen-wrapper-button">
+                                                                <div class="sample" data-duration="60"
+                                                                     data-showprogressbar="true" data-playtext=""
+                                                                     data-pausetext="" data-resumetext=""
+                                                                     data-src="{{ asset('storage/' . $track->track ) }}"></div>
+                                                            </div>
+                                                        @else
+                                                            <div class="listen-wrapper-button">
+                                                                <a target="_blank" href="{{ $track->link }}"
+                                                                   class="link">Слушать онлайн</a>
+                                                            </div>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="wrapper-track-item">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="track-wrapper-image">
-                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                         alt="raider_left.png">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="raider-wrapper-download flex-center">
-                                                    <p class="raider-download-download">16 июля 2018</p>
-                                                    <p class="raider-download-head-text">One More Night</p>
-                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
+                                    </li>
+                                @endforeach
 
-                                                    <div class="listen-wrapper-button">
-                                                        <div class="sample" data-duration="31" data-showloader="false"
-                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="wrapper-track-item">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="track-wrapper-image">
-                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                         alt="raider_left.png">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="raider-wrapper-download flex-center">
-                                                    <p class="raider-download-download">16 июля 2018</p>
-                                                    <p class="raider-download-head-text">One More Night</p>
-                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
-
-                                                    <div class="listen-wrapper-button">
-                                                        <div class="sample" data-duration="31"
-                                                             data-showprogressbar="false"
-                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
                     </div>

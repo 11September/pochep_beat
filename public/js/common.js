@@ -45,5 +45,7 @@ $(document).ready(function () {
         // customDirectionNav: $(".custom-navigation a")
     });
 
-    $('.sample').jabradoodle();
+    $('.sample').jabradoodle(
+
+    );
 });
