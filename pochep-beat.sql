@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 23 2018 г., 20:18
+-- Время создания: Июл 26 2018 г., 17:56
 -- Версия сервера: 5.7.19
 -- Версия PHP: 7.1.7
 
@@ -70,7 +70,33 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (19, 3, 'created_at', 'timestamp', 'Created At', 0, 0, 0, 0, 0, 0, '', 3),
 (20, 3, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '', 4),
 (21, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, '', 5),
-(22, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, '', 9);
+(22, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, '', 9),
+(23, 4, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(24, 4, 'name', 'text', 'Имя', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
+(25, 4, 'description', 'text_area', 'Описание', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 3),
+(26, 4, 'position', 'text', 'Должность', 0, 1, 1, 1, 1, 1, NULL, 5),
+(27, 4, 'sphere', 'text', 'Сфера', 0, 1, 1, 1, 1, 1, NULL, 6),
+(28, 4, 'created_at', 'timestamp', 'Время создания', 0, 0, 1, 0, 0, 0, NULL, 7),
+(29, 4, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 8),
+(30, 4, 'image', 'image', 'Картинка', 1, 1, 1, 1, 1, 1, '{\"quality\":\"80%\",\"upsize\":true}', 4),
+(31, 5, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(32, 5, 'photo', 'image', 'Фото', 1, 1, 1, 1, 1, 1, '{\"quality\":\"80%\",\"upsize\":true}', 3),
+(33, 5, 'created_at', 'timestamp', 'Время создания', 0, 1, 1, 0, 0, 1, NULL, 4),
+(34, 5, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 5),
+(35, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(36, 6, 'name', 'text', 'Название', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
+(37, 6, 'video', 'file', 'Ресурс', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 3),
+(38, 6, 'created_at', 'timestamp', 'Время создания', 0, 1, 1, 1, 0, 1, NULL, 4),
+(39, 6, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 5),
+(40, 7, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
+(41, 7, 'name', 'text', 'Название', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
+(42, 7, 'track', 'file', 'Трек', 0, 1, 1, 1, 1, 1, NULL, 3),
+(43, 7, 'preview', 'image', 'Preview', 1, 1, 1, 1, 1, 1, '{\"quality\":\"80%\",\"upsize\":true}', 4),
+(44, 7, 'created_at', 'timestamp', 'Время создания', 0, 0, 1, 0, 0, 1, NULL, 5),
+(45, 7, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 6),
+(46, 5, 'name', 'text', 'Название', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
+(47, 7, 'date', 'date', 'Дата выхода', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 5),
+(48, 7, 'author', 'text', 'Исполнитель', 0, 0, 1, 1, 1, 1, '{\"default\":\"POCHEP BEAT\"}', 5);
 
 -- --------------------------------------------------------
 
@@ -103,7 +129,11 @@ CREATE TABLE `data_types` (
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', '', '', 1, 0, NULL, '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
-(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2018-07-23 14:13:41', '2018-07-23 14:13:41');
+(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, '', '', 1, 0, NULL, '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
+(4, 'persons', 'persons', 'Команда', 'Команда', 'voyager-people', 'App\\Person', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(5, 'photos', 'photos', 'Фото', 'Фото', 'voyager-photo', 'App\\Photo', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(6, 'videos', 'videos', 'Видео', 'Видео', 'voyager-video', 'App\\Video', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(7, 'tracks', 'tracks', 'Track', 'Tracks', 'voyager-music', 'App\\Track', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null}', '2018-07-25 10:46:54', '2018-07-25 10:46:54');
 
 -- --------------------------------------------------------
 
@@ -162,7 +192,11 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2018-07-23 14:13:41', '2018-07-23 14:13:41', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2018-07-23 14:13:41', '2018-07-23 14:13:41', 'voyager.bread.index', NULL),
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2018-07-23 14:13:41', '2018-07-23 14:13:41', 'voyager.settings.index', NULL),
-(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2018-07-23 14:13:42', '2018-07-23 14:13:42', 'voyager.hooks', NULL);
+(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2018-07-23 14:13:42', '2018-07-23 14:13:42', 'voyager.hooks', NULL),
+(12, 1, 'Команда', '', '_self', 'voyager-people', NULL, NULL, 15, '2018-07-25 09:46:50', '2018-07-25 09:46:50', 'voyager.persons.index', NULL),
+(13, 1, 'Фото', '', '_self', 'voyager-photo', NULL, NULL, 16, '2018-07-25 10:36:43', '2018-07-25 10:36:43', 'voyager.photos.index', NULL),
+(14, 1, 'Видео', '', '_self', 'voyager-video', NULL, NULL, 17, '2018-07-25 10:43:04', '2018-07-25 10:43:04', 'voyager.videos.index', NULL),
+(15, 1, 'Музыка', '', '_self', 'voyager-music', '#000000', NULL, 18, '2018-07-25 10:46:54', '2018-07-25 10:47:38', 'voyager.tracks.index', 'null');
 
 -- --------------------------------------------------------
 
@@ -260,7 +294,27 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (23, 'edit_settings', 'settings', '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
 (24, 'add_settings', 'settings', '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
 (25, 'delete_settings', 'settings', '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
-(26, 'browse_hooks', NULL, '2018-07-23 14:13:42', '2018-07-23 14:13:42');
+(26, 'browse_hooks', NULL, '2018-07-23 14:13:42', '2018-07-23 14:13:42'),
+(27, 'browse_persons', 'persons', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(28, 'read_persons', 'persons', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(29, 'edit_persons', 'persons', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(30, 'add_persons', 'persons', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(31, 'delete_persons', 'persons', '2018-07-25 09:46:50', '2018-07-25 09:46:50'),
+(32, 'browse_photos', 'photos', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(33, 'read_photos', 'photos', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(34, 'edit_photos', 'photos', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(35, 'add_photos', 'photos', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(36, 'delete_photos', 'photos', '2018-07-25 10:36:43', '2018-07-25 10:36:43'),
+(37, 'browse_videos', 'videos', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(38, 'read_videos', 'videos', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(39, 'edit_videos', 'videos', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(40, 'add_videos', 'videos', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(41, 'delete_videos', 'videos', '2018-07-25 10:43:04', '2018-07-25 10:43:04'),
+(42, 'browse_tracks', 'tracks', '2018-07-25 10:46:54', '2018-07-25 10:46:54'),
+(43, 'read_tracks', 'tracks', '2018-07-25 10:46:54', '2018-07-25 10:46:54'),
+(44, 'edit_tracks', 'tracks', '2018-07-25 10:46:54', '2018-07-25 10:46:54'),
+(45, 'add_tracks', 'tracks', '2018-07-25 10:46:54', '2018-07-25 10:46:54'),
+(46, 'delete_tracks', 'tracks', '2018-07-25 10:46:54', '2018-07-25 10:46:54');
 
 -- --------------------------------------------------------
 
@@ -303,7 +357,82 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (23, 1),
 (24, 1),
 (25, 1),
-(26, 1);
+(26, 1),
+(27, 1),
+(28, 1),
+(29, 1),
+(30, 1),
+(31, 1),
+(32, 1),
+(33, 1),
+(34, 1),
+(35, 1),
+(36, 1),
+(37, 1),
+(38, 1),
+(39, 1),
+(40, 1),
+(41, 1),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1),
+(46, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `persons`
+--
+
+CREATE TABLE `persons` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sphere` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `persons`
+--
+
+INSERT INTO `persons` (`id`, `name`, `description`, `image`, `position`, `sphere`, `created_at`, `updated_at`) VALUES
+(1, 'Яценко Мария', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\heqKdYjmJybom3HNlIHG.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:33:01'),
+(2, 'lebedev', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\0LQk9pFG1yE0FmGqFYJN.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:37:53'),
+(3, 'mihno', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\4NAZtHP9FDntHQ0yrG99.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:06'),
+(4, 'pochep', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\elArUhTfA0y78iytKTgs.png', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:22'),
+(5, 'zamkova', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\tyz86lHTLpVT2vQDivqE.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:46'),
+(6, 'guturya', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\s7ATRJisP9KnH3bixMgp.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:39:36');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `photos`
+--
+
+CREATE TABLE `photos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `photo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `photos`
+--
+
+INSERT INTO `photos` (`id`, `name`, `photo`, `created_at`, `updated_at`) VALUES
+(1, 'Фото', 'photos\\July2018\\ssMXjo7N7k0Kvu5rTqGn.jpg', '2018-07-26 08:43:54', '2018-07-26 08:49:32'),
+(2, 'Фото', 'photos\\July2018\\J2cgwASaaiHrd3vO9NaL.jpg', '2018-07-26 08:44:07', '2018-07-26 08:49:51'),
+(3, 'Фото', 'photos\\July2018\\xgBa9zNOIOx6ccmrXIYe.png', '2018-07-26 08:44:17', '2018-07-26 08:50:06'),
+(4, 'Фото', 'photos\\July2018\\3ILzoE6pnSoiMUNzjuC0.jpg', '2018-07-26 08:44:26', '2018-07-26 08:50:15'),
+(5, 'Фото', 'photos\\July2018\\gzuA0lHhlL67T6ltR9sy.jpg', '2018-07-26 08:44:36', '2018-07-26 08:50:27'),
+(6, 'Фото', 'photos\\July2018\\d3DpZ4Bo6BqDlpHMOzfD.jpg', '2018-07-26 08:44:47', '2018-07-26 08:50:34');
 
 -- --------------------------------------------------------
 
@@ -352,13 +481,45 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (1, 'site.title', 'Site Title', 'Site Title', '', 'text', 1, 'Site'),
 (2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
 (3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
-(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', '', '', 'text', 4, 'Site'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
 (5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
 (7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
-(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', '', '', 'text', 1, 'Admin');
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
+(12, 'site.management', 'Management mail', 'management@mail.com', NULL, 'text', 6, 'Site'),
+(13, 'site.mail', 'Mail', 'mail@mail.com', NULL, 'text', 7, 'Site'),
+(14, 'site.phone', 'Phone', '+380660489635', NULL, 'text', 8, 'Site'),
+(15, 'site.fan_mail', 'Fan mail', 'fan-mail@mail.com', NULL, 'text', 9, 'Site'),
+(16, 'site.about_text', 'About us text', 'Мы играем музыку, которая нравится в первую очередь нам. Музыку, которую мы способны почувствовать, как свою, и донести эти чувства до зрителя. Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и проблемах. Наша музыка изменит ритм вашей жизни. Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую мелодию превратить в шквал эмоций и зажечь ваши сердца. Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года 2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».', NULL, 'text_area', 10, 'Site');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `tracks`
+--
+
+CREATE TABLE `tracks` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `track` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `preview` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `tracks`
+--
+
+INSERT INTO `tracks` (`id`, `name`, `track`, `link`, `preview`, `author`, `date`, `created_at`, `updated_at`) VALUES
+(1, 'POCHEP BEAT - Forever', '[{\"download_link\":\"tracks\\\\July2018\\\\NDuldDMjBeOobWn96C6U.mp3\",\"original_name\":\"POCHEP BEAT - Forever.mp3\"}]', NULL, 'tracks\\July2018\\VscZMGwZ4rqBvpxtH9lD.png', 'POCHEP BEAT', '2018-07-16', '2018-07-26 09:50:19', '2018-07-26 10:00:54'),
+(2, 'POCHEP BEAT - Mein Herz Brennt', '[{\"download_link\":\"tracks\\\\July2018\\\\Egfml4GPKf8oUHCXdJtL.mp3\",\"original_name\":\"POCHEP BEAT - Mein Herz Brennt.mp3\"}]', NULL, 'tracks\\July2018\\XAhCwFqQWpX6MbaoKHhB.jpg', 'POCHEP BEAT', '2018-07-17', '2018-07-26 09:51:47', '2018-07-26 10:00:48'),
+(3, 'Pochep Beat - Wanders', '[{\"download_link\":\"tracks\\\\July2018\\\\XtTLUJ7nVX1UEv5nGUse.mp3\",\"original_name\":\"Pochep Beat - Wanders.mp3\"}]', NULL, 'tracks\\July2018\\xi1DsjH3e1PjeQ1wM5in.jpg', 'POCHEP BEAT', '2018-07-18', '2018-07-26 09:53:15', '2018-07-26 10:00:43');
 
 -- --------------------------------------------------------
 
@@ -412,6 +573,20 @@ INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `re
 CREATE TABLE `user_roles` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `role_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `video` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -475,6 +650,18 @@ ALTER TABLE `permission_role`
   ADD KEY `permission_role_role_id_index` (`role_id`);
 
 --
+-- Индексы таблицы `persons`
+--
+ALTER TABLE `persons`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `photos`
+--
+ALTER TABLE `photos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `roles`
 --
 ALTER TABLE `roles`
@@ -487,6 +674,12 @@ ALTER TABLE `roles`
 ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `settings_key_unique` (`key`);
+
+--
+-- Индексы таблицы `tracks`
+--
+ALTER TABLE `tracks`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Индексы таблицы `translations`
@@ -512,6 +705,12 @@ ALTER TABLE `user_roles`
   ADD KEY `user_roles_role_id_index` (`role_id`);
 
 --
+-- Индексы таблицы `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -519,12 +718,12 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT для таблицы `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT для таблицы `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `menus`
 --
@@ -534,7 +733,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT для таблицы `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT для таблицы `migrations`
 --
@@ -544,7 +743,17 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблицы `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+--
+-- AUTO_INCREMENT для таблицы `persons`
+--
+ALTER TABLE `persons`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT для таблицы `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT для таблицы `roles`
 --
@@ -554,7 +763,12 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблицы `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT для таблицы `tracks`
+--
+ALTER TABLE `tracks`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `translations`
 --
@@ -565,6 +779,11 @@ ALTER TABLE `translations`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT для таблицы `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
