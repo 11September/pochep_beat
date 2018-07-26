@@ -115,17 +115,37 @@ p{
     color: red;
 }
 .pics-intro{
+    padding: 0 5%;
     display: flex;
     justify-content: center;
 }
-.row.pics-intro .col-md-3:hover .overlay{
+
+.wrapper-picture-item{
+    margin-bottom: 10px;
+    height: 320px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper-picture-item img{
+    width:100%;
+    height:100%;
+}
+
+.row.pics-intro .wrapper-picture-item:hover .overlay{
     opacity: 1;
 }
 .overlay .text{
-    height: 100%;
+    height: 110px;
+    max-height: 110px;
     width: 100%;
     padding: 0 15px;
 }
+
+.overlay .text h2{
+    margin-top: 0;
+}
+
 .overlay .text .left-border_o .bot-border_o h2 {
     position: absolute;
 
@@ -149,8 +169,8 @@ p{
     top: 0;
     bottom: 0;
     left: 0;
-    color: white;
     padding: 0;
+    color: white;
     right: 0;
     height: 100%;
     width: 100%;
@@ -161,23 +181,26 @@ p{
 .right-top-border{
     float: right;
     margin: -5% 5% 0 0;
-    height: 22%;
-    width: 25%;
+    height: 90px;
+    width: 90px;
     z-index: 0;
     border-top: 1px solid white;
     border-right: 1px solid white;
 }
 .left-bottom-border{
-    height: 25%;
-    margin-top:-5%;
+    height: 70px;
+    margin: 0 15px;
     z-index: 0;
-    width: 22%;
+    width: 80px;
     border-bottom: 1px solid white;
     border-left: 1px solid white;
 }
 .bot-right-text{
-    margin-top: -10px;
+    margin-top: -20px;
+    margin-right: 20px;
     float: right;
+    font-size: 18px;
+    line-height: 1;
 }
 .row.pics-intro .col-md-3
 {
@@ -189,14 +212,30 @@ p{
 }
 .about-pics .pics-intro .overlay .text.text-center h2{
     text-decoration: underline;
-    margin: 10% 0 0 0;
     z-index: 10;
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 .about-pics .pics-intro .overlay .text.text-center p{
     margin: 0;
     padding: 0 10%;
     z-index: 10;
+    font-size: 20px;
 }
+
+.overlay-top{
+    margin-top: 15px;
+    width:100%;
+    height:100px;
+}
+
+.overlay-bottom{
+    height:100px;
+    width: 100%;
+}
+
+
+
 .text-rotate{
     /* Safari */
     -webkit-transform: rotate(-90deg);
@@ -269,7 +308,9 @@ p{
     z-index: 0;
 }
 .top-left-text{
-    padding: 5px;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 1;
 }
 .img-sqr:hover{
     transform: scale(1.1, 1.1);
@@ -282,7 +323,7 @@ p{
 #photos {
     width: 100%;
     min-height: 500px;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 .title_icon{
     float:right;

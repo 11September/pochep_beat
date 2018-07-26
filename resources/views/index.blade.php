@@ -2327,12 +2327,12 @@
             </div>
         </div>
         <ul id="ul" class="nav navbar-nav text-center">
-            <li><a href="#about2">About</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#videos">Videos</a></li>
-            <li><a href="#tracks">Tracks</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="#pdf">Tech Render (pdf)</a></li>
+            <li><a href="#about2">О НАС</a></li>
+            <li><a href="#photos">Фото</a></li>
+            <li><a href="#videos">Видео</a></li>
+            <li><a href="#tracks">Треки</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="#pdf">Рейдер</a></li>
         </ul>
         <div id="title-pic" class="title_icon">
             <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt=""/></a>
@@ -2348,372 +2348,425 @@
                     <h2 class="text-rotate"><span>О</span> НАС</h2>
                 </div>
                 <div class="col-md-8">
-                    <p class="intro-welcome-text">Мы играем музыку, которая нравится в первую очередь нам. Музыку, которую мы способны почувствовать, как свою, и донести эти чувства до зрителя.
-                        Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и проблемах.
+                    <p class="intro-welcome-text">Мы играем музыку, которая нравится в первую очередь нам. Музыку,
+                        которую мы способны почувствовать, как свою, и донести эти чувства до зрителя.
+                        Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и
+                        проблемах.
                         Наша музыка изменит ритм вашей жизни.
-                        Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую мелодию превратить в шквал эмоций и зажечь ваши сердца.
-                        Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года 2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».
+                        Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую
+                        мелодию превратить в шквал эмоций и зажечь ваши сердца.
+                        Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года
+                        2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».
                     </p>
                 </div>
                 <div class="col-md-2"></div>
             </div>
             <div class="container about-pics">
                 <div class="row pics-intro">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                        <div class="overlay">
-                            <div class="top-left-text">Балет</div>
-                            <div class="right-top-border"></div>
-                            <div class="text text-center">
-                                <h2>Яценко Мария</h2>
-                                <p>Участник коллектива "POCHEP BEAT"</p>
-                                <div class="left-bottom-border"></div>
-                                <div class="bot-right-text">Хореограф</div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
-                        <div class="overlay">
-                            <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
-                        <div class="overlay">
-                            <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="wrapper-picture-item">
+                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
+                            <div class="overlay">
+                                <div class="overlay-top">
+                                    <div class="top-left-text">Балет</div>
+                                    <div class="right-top-border"></div>
+                                </div>
+                                <div class="text text-center">
+                                    <h2>Яценко Мария</h2>
+                                    <p>Участник коллектива "POCHEP BEAT"</p>
+                                </div>
+                                <div class="overlay-bottom">
+                                    <div class="left-bottom-border"></div>
+                                    <div class="bot-right-text">Хореограф</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row pics-intro">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
-                        <div class="overlay">
-                            <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive" />
-                        <div class="overlay">
-                            <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <img src="{{asset('img/pic1.jpg')}}" class="img-responsive"/>
-                        <div class="overlay">
-                            <div class="text text-center">
-                                <h2>Robert Barateon</h2>
-                                <p>Участник коллектива
-                                    Бла-Бла, бла-бла, бла-бла</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="photos" class="photos">
+        <h2>Фото</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/2-min.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/3-min.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/4-min.png')}}" class=""/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/5-min.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/6-min.jpg')}}" class=""/></div>
+                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/7-min.jpg')}}" class=""/></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="videos" class="videos">
+        <h2>Видео</h2>
+
+        <div class="container">
+            <div class="video-wrapper-slider">
+                <div id="slider" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <!-- items mirrored twice, total of 12 -->
+                    </ul>
+                </div>
+                <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
+                        <!-- items mirrored twice, total of 12 -->
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-<section id="photos" class="photos">
-    <h2>Фото</h2>
-    <div class="container">
-        <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/2.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/3.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/4.png')}}" class=""/></div>
-        </div>
-        <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/5.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/6.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/7.jpg')}}" class=""/></div>
-        </div>
-    </div>
-</section>
+    <section id="tracks" class="tracks">
+        <h2>Треки</h2>
 
-<section id="videos" class="videos">
-    <h2>Видео</h2>
-
-    <div class="container">
-        <div class="video-wrapper-slider">
-            <div id="slider" class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <!-- items mirrored twice, total of 12 -->
-                </ul>
-            </div>
-            <div id="carousel" class="flexslider">
-                <ul class="slides">
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <li>
-                        <img src="img/pb_1920x1800_back2-min.jpg"/>
-                    </li>
-                    <!-- items mirrored twice, total of 12 -->
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="tracks" class="tracks">
-    <h2>Треки</h2>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tracks-wrapper-slider">
-                    <div id="tracks-slider" class="flexslider">
-                        <ul class="slides">
-                            <li>
-                                <div class="wrapper-track-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="track-wrapper-image">
-                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                     alt="raider_left.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tracks-wrapper-slider">
+                        <div id="tracks-slider" class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <div class="wrapper-track-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="track-wrapper-image">
+                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                         alt="raider_left.png">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="raider-wrapper-download flex-center">
-                                                <p class="raider-download-download">16 июля 2018</p>
-                                                <p class="raider-download-head-text">One More Night</p>
-                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+                                            <div class="col-md-6">
+                                                <div class="raider-wrapper-download flex-center">
+                                                    <p class="raider-download-download">16 июля 2018</p>
+                                                    <p class="raider-download-head-text">One More Night</p>
+                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
 
-                                                <div class="listen-wrapper-button">
-                                                    <div class="sample" data-duration="31" data-showprogressbar="false"
-                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    <div class="listen-wrapper-button">
+                                                        <div class="sample" data-duration="31"
+                                                             data-showprogressbar="false"
+                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="wrapper-track-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="track-wrapper-image">
-                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                     alt="raider_left.png">
+                                </li>
+                                <li>
+                                    <div class="wrapper-track-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="track-wrapper-image">
+                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                         alt="raider_left.png">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="raider-wrapper-download flex-center">
-                                                <p class="raider-download-download">16 июля 2018</p>
-                                                <p class="raider-download-head-text">One More Night</p>
-                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+                                            <div class="col-md-6">
+                                                <div class="raider-wrapper-download flex-center">
+                                                    <p class="raider-download-download">16 июля 2018</p>
+                                                    <p class="raider-download-head-text">One More Night</p>
+                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
 
-                                                <div class="listen-wrapper-button">
-                                                    <div class="sample" data-duration="31" data-showloader="false"
-                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    <div class="listen-wrapper-button">
+                                                        <div class="sample" data-duration="31" data-showloader="false"
+                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="wrapper-track-item">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="track-wrapper-image">
-                                                <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                     alt="raider_left.png">
+                                </li>
+                                <li>
+                                    <div class="wrapper-track-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="track-wrapper-image">
+                                                    <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                         alt="raider_left.png">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="raider-wrapper-download flex-center">
-                                                <p class="raider-download-download">16 июля 2018</p>
-                                                <p class="raider-download-head-text">One More Night</p>
-                                                <p class="raider-download-knowing">POCHEP BEAT</p>
+                                            <div class="col-md-6">
+                                                <div class="raider-wrapper-download flex-center">
+                                                    <p class="raider-download-download">16 июля 2018</p>
+                                                    <p class="raider-download-head-text">One More Night</p>
+                                                    <p class="raider-download-knowing">POCHEP BEAT</p>
 
-                                                <div class="listen-wrapper-button">
-                                                    <div class="sample" data-duration="31" data-showprogressbar="false"
-                                                         data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    <div class="listen-wrapper-button">
+                                                        <div class="sample" data-duration="31"
+                                                             data-showprogressbar="false"
+                                                             data-src="//media.joshwilliams.com.s3.amazonaws.com/projects/code/jabradoodle/samples/Dave_Depper_-_Pop_Nugget.mp3"></div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="contacts" class="contacts">
-    <h2>Контакты</h2>
+    <section id="contacts" class="contacts">
+        <h2>Контакты</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="contacts-wrapper-info">
-                    <div class="contacts-info-item">
-                        <p class="contacts-item-title">Management</p>
-                        <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
-                    </div>
-                    <div class="contacts-info-item">
-                        <p class="contacts-item-title">Press</p>
-                        <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
-                    </div>
-                    <div class="contacts-info-item">
-                        <p class="contacts-item-title">Телефон</p>
-                        <p class="contacts-item-info"><i class="fa fa-phone"></i> mail@mail.mail</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="contacts-wrapper-map">
-                    <div class="contacts-wrapper-info-absolute">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contacts-wrapper-info">
                         <div class="contacts-info-item">
-                            <p class="contacts-item-title">Fan Mail</p>
+                            <p class="contacts-item-title">Management</p>
                             <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
                         </div>
+                        <div class="contacts-info-item">
+                            <p class="contacts-item-title">Press</p>
+                            <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
+                        </div>
+                        <div class="contacts-info-item">
+                            <p class="contacts-item-title">Телефон</p>
+                            <p class="contacts-item-info"><i class="fa fa-phone"></i> mail@mail.mail</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="contacts-wrapper-map">
+                        <div class="contacts-wrapper-info-absolute">
+                            <div class="contacts-info-item">
+                                <p class="contacts-item-title">Fan Mail</p>
+                                <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="pdf" class="raider">
-    <h2>Технический рейдер</h2>
+    <section id="pdf" class="raider">
+        <h2>Технический рейдер</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="raider-wrapper-image">
-                    <img src="{{ asset('img/raider_left.png') }}" alt="raider_left.png">
-                    <div class="raider-download-pdf">PDF</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="raider-wrapper-image">
+                        <img src="{{ asset('img/raider_left.png') }}" alt="raider_left.png">
+                        <div class="raider-download-pdf">PDF</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="raider-wrapper-download flex-center">
-                    <p class="raider-download-download">Загрузите наш</p>
-                    <p class="raider-download-head-text">технический рейдер</p>
-                    <p class="raider-download-knowing">для ознакомления с группой <span
-                                class="fill-text">POCHEP BEAT</span></p>
+                <div class="col-md-6">
+                    <div class="raider-wrapper-download flex-center">
+                        <p class="raider-download-download">Загрузите наш</p>
+                        <p class="raider-download-head-text">технический рейдер</p>
+                        <p class="raider-download-knowing">для ознакомления с группой <span
+                                    class="fill-text">POCHEP BEAT</span></p>
 
-                    <div class="raider-download-wrapper-button">
-                        <a href="#" class="raider-download-button">Скачать PDF</a>
+                        <div class="raider-download-wrapper-button">
+                            <a href="#" class="raider-download-button">Скачать PDF</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div class="col-md-12">
-        <div class="row"><img src="{{asset('img/PB_WHITE.png')}}" class="img-responsive"/></div>
-        <div class="row"><h2>Copyright 2018</h2></div>
-    </div>
-</footer>
+    <footer>
+        <div class="col-md-12">
+            <div class="row"><img src="{{asset('img/PB_WHITE.png')}}" class="img-responsive"/></div>
+            <div class="row"><h2>Copyright 2018</h2></div>
+        </div>
+    </footer>
 
-<div class="hidden"></div>
+    <div class="hidden"></div>
 
-<!--[if lt IE 9]>
-<script src="libs/html5shiv/es5-shim.min.js"></script>
-<script src="libs/html5shiv/html5shiv.min.js"></script>
-<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-<script src="libs/respond/respond.min.js"></script>
-<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
 
-<!-- Load CSS -->
-<script>
-    function loadCSS(hf) {
-        var ms = document.createElement("link");
-        ms.rel = "stylesheet";
-        ms.href = hf;
-        document.getElementsByTagName("head")[0].appendChild(ms);
-    }
-
-    //    loadCSS("_header.css");
-    loadCSS("{{ asset('css/style.css') }}");
-    loadCSS("{{ asset('css/flexslider.css') }}");
-    loadCSS("{{ asset('css/jabradoodle.css') }}");
-</script>
-
-<!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
-<script>var ms = document.createElement("link");
-    ms.rel = "stylesheet";
-    // ms.href="compiled.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
-</script>
-
-<!-- Load Scripts -->
-<script>
-    var scr = {
-        "scripts": [
-            {"src": "{{ asset('js/modernizr.js') }}", "async": false},
-            {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
-            {"src": "{{ asset('js/jquery-migrate-3.0.0.min.js') }}", "async": false},
-            {"src": "{{ asset('js/bootstrap.min.js') }}", "async": false},
-            {"src": "{{ asset('js/jquery.scrollTo.min.js') }}", "async": false},
-            {"src": "{{ asset('js/jquery.flexslider-min.js') }}", "async": false},
-            {"src": "{{ asset('js/jabradoodle.js') }}", "async": false},
-            {"src": "{{ asset('js/common.js') }}", "async": false}
-        ]
-    };
-    !function (t, n, r) {
-        "use strict";
-        var c = function (t) {
-            if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
-            for (var r = 0; r < t.length; r++) {
-                var c = n.createElement("script"), e = t[r];
-                c.src = e.src, c.async = e.async, n.body.appendChild(c)
-            }
-            return !0
-        };
-        t.addEventListener ? t.addEventListener("load", function () {
-            c(r.scripts);
-        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
-            c(r.scripts)
-        }) : t.onload = function () {
-            c(r.scripts)
+    <!-- Load CSS -->
+    <script>
+        function loadCSS(hf) {
+            var ms = document.createElement("link");
+            ms.rel = "stylesheet";
+            ms.href = hf;
+            document.getElementsByTagName("head")[0].appendChild(ms);
         }
-    }(window, document, scr);
-</script>
+
+        //    loadCSS("_header.css");
+        loadCSS("{{ asset('css/style.css') }}");
+        loadCSS("{{ asset('css/flexslider.css') }}");
+        loadCSS("{{ asset('css/jabradoodle.css') }}");
+    </script>
+
+    <!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
+    <script>var ms = document.createElement("link");
+        ms.rel = "stylesheet";
+        // ms.href="compiled.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
+    </script>
+
+    <!-- Load Scripts -->
+    <script>
+        var scr = {
+            "scripts": [
+                {"src": "{{ asset('js/modernizr.js') }}", "async": false},
+                {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
+                {"src": "{{ asset('js/jquery-migrate-3.0.0.min.js') }}", "async": false},
+                {"src": "{{ asset('js/bootstrap.min.js') }}", "async": false},
+                {"src": "{{ asset('js/jquery.scrollTo.min.js') }}", "async": false},
+                {"src": "{{ asset('js/jquery.flexslider-min.js') }}", "async": false},
+                {"src": "{{ asset('js/jabradoodle.js') }}", "async": false},
+                {"src": "{{ asset('js/common.js') }}", "async": false}
+            ]
+        };
+        !function (t, n, r) {
+            "use strict";
+            var c = function (t) {
+                if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+                for (var r = 0; r < t.length; r++) {
+                    var c = n.createElement("script"), e = t[r];
+                    c.src = e.src, c.async = e.async, n.body.appendChild(c)
+                }
+                return !0
+            };
+            t.addEventListener ? t.addEventListener("load", function () {
+                c(r.scripts);
+            }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+                c(r.scripts)
+            }) : t.onload = function () {
+                c(r.scripts)
+            }
+        }(window, document, scr);
+    </script>
 
 </body>
 </html>
