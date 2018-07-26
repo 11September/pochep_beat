@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', "WelcomeController@index");
 
 
 Route::group(['prefix' => 'admin'], function () {

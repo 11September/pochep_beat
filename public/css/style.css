@@ -303,7 +303,8 @@ p{
 .img-sqr{
     text-align: center;
     overflow: hidden;
-    max-height: 319px;
+    min-height: 300px;
+    max-height: 420px;
     padding: 0!important;
     z-index: 0;
 }
@@ -449,6 +450,12 @@ section h2:before {
 .contacts-item-info{
     margin: 0;
     font-size: 26px;
+}
+
+.contacts-item-info a{
+    font-size: 26px;
+    color: #212529;
+    text-decoration: none;
 }
 
 .contacts-wrapper-map{

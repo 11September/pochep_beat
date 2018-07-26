@@ -2348,135 +2348,50 @@
                     <h2 class="text-rotate"><span>О</span> НАС</h2>
                 </div>
                 <div class="col-md-8">
-                    <p class="intro-welcome-text">Мы играем музыку, которая нравится в первую очередь нам. Музыку,
-                        которую мы способны почувствовать, как свою, и донести эти чувства до зрителя.
-                        Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и
-                        проблемах.
-                        Наша музыка изменит ритм вашей жизни.
-                        Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую
-                        мелодию превратить в шквал эмоций и зажечь ваши сердца.
-                        Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года
-                        2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».
+                    <p class="intro-welcome-text">
+                        @if(setting('site.about_text'))
+                            {{ setting('site.about_text') }}
+                        @else
+                            Мы играем музыку, которая нравится в первую очередь нам. Музыку,
+                            которую мы способны почувствовать, как свою, и донести эти чувства до зрителя.
+                            Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах
+                            и
+                            проблемах.
+                            Наша музыка изменит ритм вашей жизни.
+                            Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую
+                            мелодию превратить в шквал эмоций и зажечь ваши сердца.
+                            Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года
+                            2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание»
+                        @endif
                     </p>
                 </div>
                 <div class="col-md-2"></div>
             </div>
             <div class="container about-pics">
                 <div class="row pics-intro">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
+
+                    @foreach($persons as $person)
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="wrapper-picture-item">
+                                <img src="{{ asset('storage/' . $person->image ) }}" class="img-responsive"/>
+                                <div class="overlay">
+                                    <div class="overlay-top">
+                                        <div class="top-left-text">{{ $person->position }}</div>
+                                        <div class="right-top-border"></div>
+                                    </div>
+                                    <div class="text text-center">
+                                        <h2>{{ $person->name }}</h2>
+                                        <p>{{ $person->description }}</p>
+                                    </div>
+                                    <div class="overlay-bottom">
+                                        <div class="left-bottom-border"></div>
+                                        <div class="bot-right-text">{{ $person->sphere }}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="wrapper-picture-item">
-                            <img src="{{asset('img/team/yatsenko.jpg')}}" class="img-responsive"/>
-                            <div class="overlay">
-                                <div class="overlay-top">
-                                    <div class="top-left-text">Балет</div>
-                                    <div class="right-top-border"></div>
-                                </div>
-                                <div class="text text-center">
-                                    <h2>Яценко Мария</h2>
-                                    <p>Участник коллектива "POCHEP BEAT"</p>
-                                </div>
-                                <div class="overlay-bottom">
-                                    <div class="left-bottom-border"></div>
-                                    <div class="bot-right-text">Хореограф</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
         </div>
@@ -2486,14 +2401,12 @@
         <h2>Фото</h2>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/2-min.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/3-min.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/4-min.png')}}" class=""/></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/5-min.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/6-min.jpg')}}" class=""/></div>
-                <div class="col-md-4 img-sqr"><img src="{{asset('img/photos/7-min.jpg')}}" class=""/></div>
+
+                @foreach($photos as $photo)
+                    <div class="col-md-4 img-sqr"><img alt="{{ $photo->name }}"
+                                                       src="{{ asset('storage/' . $photo->photo ) }}" class=""/></div>
+                @endforeach
+
             </div>
         </div>
     </section>
@@ -2644,15 +2557,42 @@
                     <div class="contacts-wrapper-info">
                         <div class="contacts-info-item">
                             <p class="contacts-item-title">Management</p>
-                            <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
+                            <p class="contacts-item-info"><i class="fa fa-envelope"></i>
+
+                                @if(setting('site.management'))
+                                    <a href="mailto:{{ setting('site.management') }}"
+                                       target="_top">{{ setting('site.management') }}</a>
+                                @else
+                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
+                                @endif
+
+                            </p>
                         </div>
                         <div class="contacts-info-item">
                             <p class="contacts-item-title">Press</p>
-                            <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
+                            <p class="contacts-item-info"><i class="fa fa-envelope"></i>
+
+                                @if(setting('site.mail'))
+                                    <a href="mailto:{{ setting('site.mail') }}"
+                                       target="_top">{{ setting('site.mail') }}</a>
+                                @else
+                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
+                                @endif
+
+                            </p>
                         </div>
                         <div class="contacts-info-item">
                             <p class="contacts-item-title">Телефон</p>
-                            <p class="contacts-item-info"><i class="fa fa-phone"></i> mail@mail.mail</p>
+                            <p class="contacts-item-info"><i class="fa fa-phone"></i>
+
+                                @if(setting('site.phone'))
+                                    <a href="tel:{{ setting('site.phone') }}"
+                                       target="_top">{{ setting('site.phone') }}</a>
+                                @else
+                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
+                                @endif
+
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -2661,7 +2601,16 @@
                         <div class="contacts-wrapper-info-absolute">
                             <div class="contacts-info-item">
                                 <p class="contacts-item-title">Fan Mail</p>
-                                <p class="contacts-item-info"><i class="fa fa-envelope"></i> mail@mail.mail</p>
+                                <p class="contacts-item-info"><i class="fa fa-envelope"></i>
+
+                                    @if(setting('site.fan_mail'))
+                                        <a href="mailto:{{ setting('site.fan_mail') }}"
+                                           target="_top">{{ setting('site.fan_mail') }}</a>
+                                    @else
+                                        <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
+                                    @endif
+
+                                </p>
                             </div>
                         </div>
                     </div>
