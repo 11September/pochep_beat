@@ -397,7 +397,7 @@ section h2:before {
 .listen-wrapper-button .jab-container{
     padding: 6px 30px;
     height: 46px;
-    /*width: 400px;*/
+    width: 200px;
     background-color: #E41E28;
     border-radius: 56px;
     font-size: 30px;
@@ -716,5 +716,37 @@ footer{
     #title-pic img{
         height: 35px;
         width: 150px;
+    }
+
+    .contacts-wrapper-map{
+        position: unset;
+        background-image: none;
+    }
+
+    .contacts-wrapper-info-absolute{
+        position: unset;
+        padding-left: 20%;
+    }
+
+    .raider-download-wrapper-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .raider-wrapper-download .raider-download-download,
+    .raider-wrapper-download .raider-download-head-text,
+    .raider-wrapper-download .raider-download-knowing,
+    .raider-wrapper-download .listen-wrapper-button
+    {
+        text-align: center;
+    }
+
+    .listen-wrapper-button {
+        width: 200px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
