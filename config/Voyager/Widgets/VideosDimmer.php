@@ -44,6 +44,7 @@ class VideosDimmer extends BaseDimmer
      */
     public function shouldBeDisplayed()
     {
-        return Auth::user()->can('browse', Voyager::model('User'));
+        return true;
+//        return Auth::user()->can('browse', Voyager::model('User'));
     }
 }

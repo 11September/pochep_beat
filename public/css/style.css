@@ -324,6 +324,11 @@ p{
     padding: 0!important;
     z-index: 0;
 }
+
+.img-sqr img{
+    height:100%;
+}
+
 .top-left-text{
     margin-left: 20px;
     font-size: 18px;
