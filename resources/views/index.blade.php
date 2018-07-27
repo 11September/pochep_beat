@@ -2348,7 +2348,11 @@
                     <h2 class="text-rotate"><span>О</span> НАС</h2>
                 </div>
                 <div class="col-md-8">
+
+                    <h2 class="intro-heading-text"><span>О</span> НАС</h2>
+
                     <p class="intro-welcome-text">
+
                         @if(setting('site.about_text'))
                             {{ setting('site.about_text') }}
                         @else
@@ -2367,7 +2371,7 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
-            <div class="container about-pics">
+            <div class="container-fluid about-pics">
                 <div class="row pics-intro">
 
                     @foreach($persons as $person)
@@ -2613,7 +2617,7 @@
                                     class="fill-text">POCHEP BEAT</span></p>
 
                         <div class="raider-download-wrapper-button">
-                            <a href="#" class="raider-download-button">Скачать PDF</a>
+                            <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать PDF</a>
                         </div>
                     </div>
                 </div>

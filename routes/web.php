@@ -12,6 +12,7 @@
 */
 
 Route::get('/', "WelcomeController@index");
+Route::get('/downloadRaider', "WelcomeController@downloadRaider");
 
 
 Route::group(['prefix' => 'admin'], function () {

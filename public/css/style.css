@@ -114,6 +114,17 @@ p{
 .about2 .col-md-2 .text-rotate span{
     color: red;
 }
+
+.intro-heading-text{
+    display: none;
+    font-size: 55px;
+    text-align: center;
+}
+
+.intro-heading-text span{
+    color: red;
+}
+
 .pics-intro{
     padding: 0 5%;
     display: flex;
@@ -269,6 +280,7 @@ p{
 }
 
 .navbar-header{
+    margin-left: 30px !important;
     height: 75px;
     display: flex;
     align-items: center;
@@ -328,7 +340,7 @@ p{
 }
 .title_icon{
     float:right;
-    margin: 20px 0;
+    margin: 25px 0 0 0;
     display: none;
 }
 section h2{
@@ -548,20 +560,33 @@ p.raider-download-head-text{
 }
 
 .raider-download-button{
-    padding: 30px 95px;
     height: 96px;
-    width:400px;
+    width: 400px;
     background-color: #594CA9;
     border-radius: 56px;
     font-size: 34px;
     color: #FFFFFF;
-    text-decoration: none;
-    clear: both;
-    float: left;
-    text-align: left;
+    /* padding: 20px 60px; */
+    /* text-decoration: none; */
+    /* clear: both; */
+    /* float: left; */
+    /* text-align: left; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.raider-download-button:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-brand{
+    padding: 10px 10px !important;
+}
+
 #burger, #cross{
-    font-size: 25px;
+    font-size: 30px;
 }
 
 footer h2{
@@ -597,9 +622,57 @@ footer{
 }
 #about2 .col-md-12 .col-md-8{
     margin: 0 auto;
-
 }
+
+@media (max-width: 1100px){
+    .navbar-inverse .navbar-nav>li>a{
+        font-size: 20px;
+    }
+
+    #ul{
+        margin-left: 35px;
+    }
+}
+
 @media (max-width: 991px){
+    #ul{
+        margin-left: 0 !important;
+    }
+
+    .navbar-inverse .navbar-nav>li>a{
+        font-size: 18px;
+    }
+
+    #navbar #title-pic {
+        display: none !important;
+    }
+
+    section h2{
+        padding: 0;
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    section h2:before{
+        display: none;
+    }
+
+    .about{
+        padding-top: 100%;
+    }
+
+    .intro-heading-text{
+        display: block;
+    }
+
+    .about-pics{
+        margin: 0;
+    }
+
+    .pics-intro{
+        padding: 0 10%;
+    }
+
     #about2 .col-md-12 .col-md-2{
         display: none;
     }
@@ -608,6 +681,10 @@ footer{
     }
     .about-pics .pics-intro .overlay .text.text-center p{
         font-size: 10px;
+    }
+
+    .raider{
+        padding-bottom: 120px;
     }
 }
 @media (max-width: 768px){
