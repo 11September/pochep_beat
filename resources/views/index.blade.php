@@ -2434,6 +2434,9 @@
                         <li>
                             <img src="img/pb_1920x1800_back2-min.jpg"/>
                         </li>
+                        <li>
+                            <img src="img/pb_1920x1800_back2-min.jpg"/>
+                        </li>
                         <!-- items mirrored twice, total of 12 -->
                     </ul>
                 </div>
@@ -2534,62 +2537,59 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="contacts-wrapper-info">
-                        <div class="contacts-info-item">
-                            <p class="contacts-item-title">Management</p>
-                            <p class="contacts-item-info"><i class="fa fa-envelope"></i>
 
-                                @if(setting('site.management'))
-                                    <a href="mailto:{{ setting('site.management') }}"
-                                       target="_top">{{ setting('site.management') }}</a>
-                                @else
-                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
-                                @endif
-
-                            </p>
-                        </div>
-                        <div class="contacts-info-item">
-                            <p class="contacts-item-title">Press</p>
-                            <p class="contacts-item-info"><i class="fa fa-envelope"></i>
-
-                                @if(setting('site.mail'))
+                        @if(setting('site.mail'))
+                            <div class="contacts-info-item">
+                                <p class="contacts-item-title">Почта</p>
+                                <p class="contacts-item-info"><i class="fa fa-envelope"></i>
                                     <a href="mailto:{{ setting('site.mail') }}"
-                                       target="_top">{{ setting('site.mail') }}</a>
-                                @else
-                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
-                                @endif
+                                       target="_top">Написать</a>
+                                </p>
+                            </div>
+                        @endif
 
-                            </p>
-                        </div>
                         <div class="contacts-info-item">
                             <p class="contacts-item-title">Телефон</p>
-                            <p class="contacts-item-info"><i class="fa fa-phone"></i>
 
-                                @if(setting('site.phone'))
+
+                            @if(setting('site.phone'))
+                                <p class="contacts-item-info">
+                                    <i class="fa fa-phone"></i>
                                     <a href="tel:{{ setting('site.phone') }}"
                                        target="_top">{{ setting('site.phone') }}</a>
-                                @else
-                                    <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
-                                @endif
+                                </p>
+                            @endif
 
-                            </p>
+
+                            @if(setting('site.phone_2'))
+                                <p class="contacts-item-info">
+                                    <i class="fa fa-phone"></i>
+                                    <a href="tel:{{ setting('site.phone_2') }}"
+                                       target="_top">{{ setting('site.phone_2') }}</a>
+                                </p>
+                            @endif
                         </div>
+
+                        @if(setting('site.facebook'))
+                            <div class="contacts-info-item">
+                                <p class="contacts-item-title">Facebook</p>
+                                <p class="contacts-item-info"><i class="fa fa-facebook-f"></i>
+                                    <a href="{{ setting('site.facebook') }}" target="_blank">Перейти</a>
+                                </p>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="contacts-wrapper-map">
                         <div class="contacts-wrapper-info-absolute">
                             <div class="contacts-info-item">
-                                <p class="contacts-item-title">Fan Mail</p>
-                                <p class="contacts-item-info"><i class="fa fa-envelope"></i>
-
-                                    @if(setting('site.fan_mail'))
-                                        <a href="mailto:{{ setting('site.fan_mail') }}"
-                                           target="_top">{{ setting('site.fan_mail') }}</a>
-                                    @else
-                                        <a href="mailto:mail@mail.mail" target="_top">mail@mail.mail</a>
-                                    @endif
-
-                                </p>
+                                @if(setting('site.instagram'))
+                                    <p class="contacts-item-title">Instagram</p>
+                                    <p class="contacts-item-info"><i class="fa fa-instagram"></i>
+                                        <a href="{{ setting('site.instagram') }}" target="_blank">Перейти</a>
+                                    </p>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -2617,7 +2617,8 @@
                                     class="fill-text">POCHEP BEAT</span></p>
 
                         <div class="raider-download-wrapper-button">
-                            <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать PDF</a>
+                            <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать
+                                PDF</a>
                         </div>
                     </div>
                 </div>

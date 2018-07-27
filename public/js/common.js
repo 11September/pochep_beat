@@ -23,7 +23,7 @@ $(document).ready(function () {
         controlNav: false,
         animationLoop: false,
         slideshow: false,
-        itemWidth: 210,
+        itemWidth: 170,
         itemMargin: 5,
         asNavFor: '#slider'
     });
