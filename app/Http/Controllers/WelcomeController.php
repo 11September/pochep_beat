@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Person;
 use App\Photo;
 use App\Track;
+use App\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
@@ -19,9 +20,11 @@ class WelcomeController extends Controller
 
         $tracks = Track::all();
 
+        $videos = Video::all();
+
         $this->render($tracks);
 
-        return view('index', compact('persons', 'photos', 'tracks'));
+        return view('index', compact('persons', 'photos', 'tracks', 'videos'));
     }
 
     public function render($items)

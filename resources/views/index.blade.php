@@ -2422,41 +2422,24 @@
             <div class="video-wrapper-slider">
                 <div id="slider" class="flexslider">
                     <ul class="slides">
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <!-- items mirrored twice, total of 12 -->
+
+                        @foreach($videos as $video)
+                            <li>
+                                {!! $video->video !!}
+                            </li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div id="carousel" class="flexslider">
                     <ul class="slides">
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
-                        <li>
-                            <img src="img/pb_1920x1800_back2-min.jpg"/>
-                        </li>
+
+                        @foreach($videos as $video)
+                            <li>
+                                {!! $video->video !!}
+                            </li>
+                        @endforeach
+
                     </ul>
                 </div>
             </div>

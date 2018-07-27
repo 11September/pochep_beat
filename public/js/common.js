@@ -25,6 +25,7 @@ $(document).ready(function () {
         slideshow: false,
         itemWidth: 170,
         itemMargin: 5,
+        mousewheel: true,
         asNavFor: '#slider'
     });
 
