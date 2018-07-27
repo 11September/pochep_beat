@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 26 2018 г., 17:56
+-- Время создания: Июл 27 2018 г., 17:25
 -- Версия сервера: 5.7.19
 -- Версия PHP: 7.1.7
 
@@ -85,8 +85,8 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (34, 5, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 5),
 (35, 6, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (36, 6, 'name', 'text', 'Название', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
-(37, 6, 'video', 'file', 'Ресурс', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 3),
-(38, 6, 'created_at', 'timestamp', 'Время создания', 0, 1, 1, 1, 0, 1, NULL, 4),
+(37, 6, 'video', 'text_area', 'Ресурс (для интеграции)', 0, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 3),
+(38, 6, 'created_at', 'timestamp', 'Время создания', 0, 1, 1, 0, 0, 1, NULL, 4),
 (39, 6, 'updated_at', 'timestamp', 'Время обновления', 0, 0, 0, 0, 0, 0, NULL, 5),
 (40, 7, 'id', 'text', 'Id', 1, 0, 0, 0, 0, 0, NULL, 1),
 (41, 7, 'name', 'text', 'Название', 1, 1, 1, 1, 1, 1, '{\"validation\":{\"rule\":\"required\"}}', 2),
@@ -333,6 +333,7 @@ CREATE TABLE `permission_role` (
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (1, 1),
+(1, 3),
 (2, 1),
 (3, 1),
 (4, 1),
@@ -353,31 +354,54 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (19, 1),
 (20, 1),
 (21, 1),
+(21, 3),
 (22, 1),
+(22, 3),
 (23, 1),
+(23, 3),
 (24, 1),
 (25, 1),
 (26, 1),
 (27, 1),
+(27, 3),
 (28, 1),
+(28, 3),
 (29, 1),
+(29, 3),
 (30, 1),
+(30, 3),
 (31, 1),
+(31, 3),
 (32, 1),
+(32, 3),
 (33, 1),
+(33, 3),
 (34, 1),
+(34, 3),
 (35, 1),
+(35, 3),
 (36, 1),
+(36, 3),
 (37, 1),
+(37, 3),
 (38, 1),
+(38, 3),
 (39, 1),
+(39, 3),
 (40, 1),
+(40, 3),
 (41, 1),
+(41, 3),
 (42, 1),
+(42, 3),
 (43, 1),
+(43, 3),
 (44, 1),
+(44, 3),
 (45, 1),
-(46, 1);
+(45, 3),
+(46, 1),
+(46, 3);
 
 -- --------------------------------------------------------
 
@@ -454,7 +478,8 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'Administrator', '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
-(2, 'user', 'Normal User', '2018-07-23 14:13:41', '2018-07-23 14:13:41');
+(2, 'user', 'Normal User', '2018-07-23 14:13:41', '2018-07-23 14:13:41'),
+(3, 'moderator', 'Moderator', '2018-07-27 09:51:48', '2018-07-27 09:51:48');
 
 -- --------------------------------------------------------
 
@@ -482,17 +507,18 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
 (3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
 (4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
-(5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
-(6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
-(7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
-(8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
-(9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
+(5, 'admin.bg_image', 'Admin Background Image', 'settings\\July2018\\GhVwts8WJ35iKqfuBkw5.jpg', '', 'image', 5, 'Admin'),
+(6, 'admin.title', 'Admin Title', 'Pochep Beat', '', 'text', 1, 'Admin'),
+(7, 'admin.description', 'Admin Description', '«Наша жизнь фантастически прекрасна, и мы её хотим прожить наяву. Думаем это приятнее, чем мечтать ….. »', '', 'text', 2, 'Admin'),
+(8, 'admin.loader', 'Admin Loader', 'settings\\July2018\\yUSuyCZu7PFtu7DYYuHc.png', '', 'image', 3, 'Admin'),
+(9, 'admin.icon_image', 'Admin Icon Image', 'settings\\July2018\\DC1m3NJyyudbFNbYtJps.png', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
-(12, 'site.management', 'Management mail', 'management@mail.com', NULL, 'text', 6, 'Site'),
-(13, 'site.mail', 'Mail', 'mail@mail.com', NULL, 'text', 7, 'Site'),
-(14, 'site.phone', 'Phone', '+380660489635', NULL, 'text', 8, 'Site'),
-(15, 'site.fan_mail', 'Fan mail', 'fan-mail@mail.com', NULL, 'text', 9, 'Site'),
-(16, 'site.about_text', 'About us text', 'Мы играем музыку, которая нравится в первую очередь нам. Музыку, которую мы способны почувствовать, как свою, и донести эти чувства до зрителя. Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и проблемах. Наша музыка изменит ритм вашей жизни. Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую мелодию превратить в шквал эмоций и зажечь ваши сердца. Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года 2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».', NULL, 'text_area', 10, 'Site');
+(13, 'site.mail', 'Mail', 'romanpochepbeat@gmail.com', NULL, 'text', 8, 'Site'),
+(14, 'site.phone', 'Phone', '+380679808700', NULL, 'text', 9, 'Site'),
+(16, 'site.about_text', 'About us text', 'Мы играем музыку, которая нравится в первую очередь нам. Музыку, которую мы способны почувствовать, как свою, и донести эти чувства до зрителя. Мы хотим, чтобы вы окунулись в нее, и на время, пока идет концерт, забыли обо всех тревогах и проблемах. Наша музыка изменит ритм вашей жизни. Драйв, стихия, страсть - все это в наших руках! Свободолюбцы и бунтари - мы способны простую мелодию превратить в шквал эмоций и зажечь ваши сердца. Наш коллектив награжден множественными музыкальными премиями, в числе которых: «Человек года 2015», а также «Музыкальная премия года 2017» в номинации «Талант и признание».', NULL, 'text_area', 7, 'Site'),
+(18, 'site.phone_2', 'Phone 2', '+380668084083', NULL, 'text', 11, 'Site'),
+(19, 'site.instagram', 'Instagram', 'https://www.instagram.com/pochepbeat', NULL, 'text', 13, 'Site'),
+(20, 'site.facebook', 'Facebook', 'https://www.facebook.com/groups/PochepBeat/', NULL, 'text', 12, 'Site');
 
 -- --------------------------------------------------------
 
@@ -562,7 +588,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', 'admin@admin.com', 'users\\July2018\\vGVXhfXgpMvL8BjuSGJl.jpg', '$2y$10$mvyKlnjt062Q2Wa/KC3t1.WHdC6TyuH7YGwCvzyYCg6y.AkbRKnrS', NULL, '{\"locale\":\"en\"}', '2018-07-23 14:14:32', '2018-07-23 14:16:03');
+(1, 1, 'admin', 'admin@admin.com', 'users\\July2018\\vGVXhfXgpMvL8BjuSGJl.jpg', '$2y$10$mvyKlnjt062Q2Wa/KC3t1.WHdC6TyuH7YGwCvzyYCg6y.AkbRKnrS', 'xPytvS2t5h6DWqS5rKX6oPAm7jDoy7Bkh4oaJIwNKMhLDCKeIZbO1IBHnGST', '{\"locale\":\"en\"}', '2018-07-23 14:14:32', '2018-07-23 14:16:03'),
+(2, 3, 'pochep', 'pochep@admin.com', 'users\\July2018\\spCfFZlhv3h6yP6s0dBG.png', '$2y$10$IUUnMLUGZF1.nK0N2yfx/.NWBLZEt3SIrJU08o8edCbps7Oj76efC', 'imzXpIaFwQ0nz7l506XWSrV5sUy7qi1KRnbs0gRkgD8USuMS6hhWrBwYNSe7', '{\"locale\":\"ru\"}', '2018-07-27 09:52:31', '2018-07-27 09:53:01');
 
 -- --------------------------------------------------------
 
@@ -588,6 +615,17 @@ CREATE TABLE `videos` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `videos`
+--
+
+INSERT INTO `videos` (`id`, `name`, `video`, `created_at`, `updated_at`) VALUES
+(1, 'Pochep Beat ( Roman Pochep) Cover version 2015', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6n_K3yq5-JM\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', '2018-07-27 09:33:00', '2018-07-27 09:42:11'),
+(2, 'Роман Почеп \"Pochep Beat\" Exclusive Music Project . Wanders (Cover version)', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6n_K3yq5-JM\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', '2018-07-27 09:36:00', '2018-07-27 09:44:37'),
+(3, 'Ocean Soul Роман Почеп Exclusive Music Project. POCHEP BEAT!!! шоу-балет Flash !!!', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6n_K3yq5-JM\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', '2018-07-27 09:37:00', '2018-07-27 09:44:49'),
+(4, 'BANANA POCHEP BEAT 19 11 2016', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6n_K3yq5-JM\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', '2018-07-27 09:37:00', '2018-07-27 09:45:02'),
+(5, 'Pochep Beat - Ohne Dich (Rammstein cover)', '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6n_K3yq5-JM\" frameborder=\"0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>', '2018-07-27 09:37:00', '2018-07-27 09:45:15');
 
 --
 -- Индексы сохранённых таблиц
@@ -758,12 +796,12 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT для таблицы `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT для таблицы `tracks`
 --
@@ -778,12 +816,12 @@ ALTER TABLE `translations`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT для таблицы `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
