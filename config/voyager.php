@@ -147,24 +147,21 @@ return [
     'dashboard' => [
         // Add custom list items to navbar's dropdown
         'navbar_items' => [
-            'Profile' => [
-                'route'      => 'voyager.profile',
-                'classes'    => 'class-full-of-rum',
-                'icon_class' => 'voyager-person',
-            ],
-            'Home' => [
+            'Сайт' => [
                 'route'        => '/',
                 'icon_class'   => 'voyager-home',
                 'target_blank' => true,
             ],
-            'Logout' => [
+            'Выйти' => [
                 'route'      => 'voyager.logout',
                 'icon_class' => 'voyager-power',
             ],
         ],
 
         'widgets' => [
-
+			'TCG\\Voyager\\Widgets\\VideosDimmer',
+			'TCG\\Voyager\\Widgets\\TracksDimmer',
+            'TCG\\Voyager\\Widgets\\PhotosDimmer',
         ],
 
     ],
@@ -203,7 +200,7 @@ return [
 
     'primary_color' => '#22A7F0',
 
-    'show_dev_tips' => true, // Show development tip "How To Use:" in Menu and Settings
+    'show_dev_tips' => false, // Show development tip "How To Use:" in Menu and Settings
 
     // Here you can specify additional assets you would like to be included in the master.blade
     'additional_css' => [
