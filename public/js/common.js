@@ -389,8 +389,6 @@
 }));
 
 
-
-
 $(document).ready(function () {
     $('a.scrollto').on('click', function (e) {
         var target = this.hash;
@@ -420,9 +418,6 @@ $(document).ready(function () {
     });
 
     $('#carousel').flexslider({
-        start: function(slider){
-            $('body').removeClass('loading');
-        },
         animation: "slide",
         rtl: true,
         controlNav: true,
@@ -432,7 +427,7 @@ $(document).ready(function () {
         itemMargin: 5,
         minItems: 2,
         maxItems: 3,
-        // mousewheel: true,
+        mousewheel: true,
         pausePlay: true,
         asNavFor: '#slider'
     });

@@ -2586,7 +2586,7 @@
             <div class="col-md-6">
                 <div class="raider-wrapper-download flex-center">
                     <p class="raider-download-download">Загрузите наш</p>
-                    <p class="raider-download-head-text">Райдер </p>
+                    <p class="raider-download-head-text">технический райдер </p>
                     <p class="raider-download-knowing">для ознакомления с группой <span
                                 class="fill-text">POCHEP BEAT</span></p>
 
