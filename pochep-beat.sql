@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 27 2018 г., 17:25
+-- Время создания: Июл 28 2018 г., 16:33
 -- Версия сервера: 5.7.19
 -- Версия PHP: 7.1.7
 
@@ -425,12 +425,12 @@ CREATE TABLE `persons` (
 --
 
 INSERT INTO `persons` (`id`, `name`, `description`, `image`, `position`, `sphere`, `created_at`, `updated_at`) VALUES
-(1, 'Яценко Мария', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\heqKdYjmJybom3HNlIHG.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:33:01'),
-(2, 'lebedev', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\0LQk9pFG1yE0FmGqFYJN.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:37:53'),
-(3, 'mihno', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\4NAZtHP9FDntHQ0yrG99.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:06'),
-(4, 'pochep', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\elArUhTfA0y78iytKTgs.png', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:22'),
-(5, 'zamkova', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\tyz86lHTLpVT2vQDivqE.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:38:46'),
-(6, 'guturya', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\s7ATRJisP9KnH3bixMgp.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-26 08:39:36');
+(1, 'Роман Почеп', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\dbB5c3DqZGnM2rwu6LtP.png', 'Скрипка', 'Руководитель', '2018-07-26 08:33:01', '2018-07-28 09:07:16'),
+(2, 'Николай Михно', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\0eh0aT1AnF008cVlpBVM.jpg', 'Ударные', NULL, '2018-07-26 08:33:01', '2018-07-28 09:13:32'),
+(3, 'Александр Гутыря', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\X8Yx0yj7gwf6WDsK0Nld.jpg', 'Бас-гитара', NULL, '2018-07-26 08:33:01', '2018-07-28 09:07:45'),
+(4, 'Дмитрий Лебедев', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\5VjbTjqCNLDPD3pSIjte.jpg', 'Гитара', NULL, '2018-07-26 08:33:01', '2018-07-28 09:07:57'),
+(5, 'Анна Замковая', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\9JGvHn1nxeQSclTEt9BB.jpg', 'Балет', NULL, '2018-07-26 08:33:01', '2018-07-28 09:08:14'),
+(6, 'Мария Яценко', 'Участник коллектива \"POCHEP BEAT\"', 'persons\\July2018\\3G6rrbkQY5I1X7V2kbhP.jpg', 'Балет', 'Хореограф', '2018-07-26 08:33:01', '2018-07-28 09:08:31');
 
 -- --------------------------------------------------------
 
@@ -588,8 +588,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', 'admin@admin.com', 'users\\July2018\\vGVXhfXgpMvL8BjuSGJl.jpg', '$2y$10$mvyKlnjt062Q2Wa/KC3t1.WHdC6TyuH7YGwCvzyYCg6y.AkbRKnrS', 'xPytvS2t5h6DWqS5rKX6oPAm7jDoy7Bkh4oaJIwNKMhLDCKeIZbO1IBHnGST', '{\"locale\":\"en\"}', '2018-07-23 14:14:32', '2018-07-23 14:16:03'),
-(2, 3, 'pochep', 'pochep@admin.com', 'users\\July2018\\spCfFZlhv3h6yP6s0dBG.png', '$2y$10$IUUnMLUGZF1.nK0N2yfx/.NWBLZEt3SIrJU08o8edCbps7Oj76efC', 'imzXpIaFwQ0nz7l506XWSrV5sUy7qi1KRnbs0gRkgD8USuMS6hhWrBwYNSe7', '{\"locale\":\"ru\"}', '2018-07-27 09:52:31', '2018-07-27 09:53:01');
+(1, 1, 'admin', 'admin@admin.com', 'users\\July2018\\vGVXhfXgpMvL8BjuSGJl.jpg', '$2y$10$mvyKlnjt062Q2Wa/KC3t1.WHdC6TyuH7YGwCvzyYCg6y.AkbRKnrS', '1UqU13G5F3MTgxCAB288So1UfoSaUEocbtzcy6hg8PMUsYZuEEYioXq62Mks', '{\"locale\":\"en\"}', '2018-07-23 14:14:32', '2018-07-23 14:16:03'),
+(2, 3, 'pochep', 'pochep@admin.com', 'users\\July2018\\spCfFZlhv3h6yP6s0dBG.png', '$2y$10$IUUnMLUGZF1.nK0N2yfx/.NWBLZEt3SIrJU08o8edCbps7Oj76efC', 'WwG38LdJc9BzJcSirXX0BBMJTlh5MFciAoNlHHFHIbqiGtF3HmQHUXB28VS1', '{\"locale\":\"ru\"}', '2018-07-27 09:52:31', '2018-07-27 09:53:01');
 
 -- --------------------------------------------------------
 
