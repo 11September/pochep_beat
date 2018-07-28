@@ -1,0 +1,255 @@
+#ul{
+	margin-left: 80px;
+}
+
+#ul, #cross{
+	display: none;
+}
+.img-sqr{
+	text-align: center;
+	overflow: hidden;
+	min-height: 300px;
+	max-height: 420px;
+	padding: 0!important;
+	z-index: 0;
+}
+
+.img-sqr img{
+	height: 100%;
+	width: 100%;
+}
+
+.top-left-text{
+	margin-left: 20px;
+	font-size: 18px;
+	line-height: 1;
+}
+.img-sqr:hover{
+	transform: scale(1.1, 1.1);
+	transition: .5s ease;
+	z-index: 10;
+}
+#navbar{
+	transition: .5s ease;
+}
+
+.navbar-brand:hover{
+	cursor:pointer;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+	background-color: transparent;
+	border-color: transparent;
+}
+.navbar-inverse .navbar-nav>li>a{color: white;font-weight: bold;}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover
+{
+	color: red;
+	background-color: transparent;
+	border-bottom: 1px solid red;
+}
+
+.navbar-header{
+	margin-left: 30px !important;
+	height: 75px;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-inverse .navbar-nav>li{
+	margin: 15px 0 10px 0;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	font-size: 25px;
+	padding: 15px 25px;
+}
+
+#title-pic a{
+	width:100%;
+	height:100%;
+}
+
+#title-pic img{
+	height: 35px;
+	width: 100%;
+}
+
+#intro {
+	background: url("../img/pb_1920x1800_back2-min.jpg") top left no-repeat;
+	/*min-height: 1800px;*/
+	background-size: 100% auto;
+}
+
+.about{
+	padding-top: 57%;
+}
+
+.about2{
+	width: 100%;
+	margin: 0;
+	background: linear-gradient(#ffffffbf, white, white);
+}
+
+.about2  p {
+	margin: 50px 0;
+}
+
+.about2 .col-md-2 .text-rotate{
+	margin: 110px 0 0 0;
+	font-size: 55px;
+}
+
+.intro-welcome-text{
+	font-size: 20px
+}
+
+.about2 .col-md-2 .text-rotate span{
+	color: red;
+}
+
+.intro-heading-text{
+	display: none;
+	font-size: 55px;
+	text-align: center;
+}
+
+.intro-heading-text span{
+	color: red;
+}
+
+.pics-intro{
+	padding: 0 5%;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper-picture-item{
+	margin-bottom: 20px;
+	height: 320px;
+	width: 100%;
+	position: relative;
+}
+
+.wrapper-picture-item img{
+	width:100%;
+	height:100%;
+}
+
+.row.pics-intro .wrapper-picture-item:hover .overlay{
+	opacity: 1;
+}
+
+.overlay .text{
+	height: 110px;
+	max-height: 110px;
+	width: 100%;
+	padding: 0 15px;
+}
+
+.overlay .text h2{
+	margin-top: 0;
+}
+
+.overlay .text .left-border_o .bot-border_o h2 {
+	position: absolute;
+}
+
+.left-border_o{
+	border-bottom: 1px solid white;
+	height: 100%;
+	margin-right: 70%;
+}
+
+.bot-border_o {
+	position: absolute;
+	border-left: 1px solid white;
+	top: 50%;
+	bottom: 4%;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0;
+	color: white;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;overflow: hidden;
+	transition: .5s ease;
+	background-color: #ce0a0678;
+}
+.right-top-border{
+	float: right;
+	margin: -5% 5% 0 0;
+	height: 90px;
+	width: 90px;
+	z-index: 0;
+	border-top: 1px solid white;
+	border-right: 1px solid white;
+}
+
+.left-bottom-border{
+	height: 70px;
+	margin: 0 15px;
+	z-index: 0;
+	width: 80px;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+}
+
+.bot-right-text{
+	margin-top: -20px;
+	margin-right: 20px;
+	float: right;
+	font-size: 18px;
+	line-height: 1;
+}
+.row.pics-intro .col-md-3 {
+	margin: 3px;
+	padding: 0;
+}
+
+.about-pics{
+	padding-bottom: 50px;
+}
+
+.about-pics .pics-intro .overlay .text.text-center h2{
+	text-decoration: underline;
+	z-index: 10;
+	font-size: 22px;
+	margin-bottom: 5px;
+}
+
+.about-pics .pics-intro .overlay .text.text-center p{
+	margin: 0;
+	padding: 0 10%;
+	z-index: 10;
+	font-size: 20px;
+}
+
+.overlay-top{
+	margin-top: 15px;
+	width:100%;
+	height:100px;
+}
+
+.overlay-bottom{
+	height:100px;
+	width: 100%;
+}
+
+.text-rotate{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}

@@ -2245,9 +2245,6 @@
 
         /*# sourceMappingURL=bootstrap-grid.min.css.map */</style>
 
-    <!-- Header CSS (First Sections of Website: compress & paste after release from _header.css here) -->
-    <style></style>
-
     <!-- Fonts Loader from _fonts.css (HTML5 LocalStorage) -->
     <script>!function () {
             function e(e, t, n) {
@@ -2277,12 +2274,8 @@
 
             var o = "_fonts.css";
             window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
-        }();</script>
-
-    <!-- Load CSS Compilled without JS -->
-    <noscript>
-        <link rel="stylesheet" href="compiled.min.css">
-    </noscript>
+        }();
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -2303,7 +2296,6 @@
             document.getElementById('cross').style.display = 'block';
             document.getElementById('burger').style.display = 'none';
         }
-
         function cross_click() {
             document.getElementById('ul').style.display = 'none';
             document.getElementById('navbar').style.background = 'transparent';
@@ -2316,8 +2308,6 @@
 </head>
 
 <body>
-
-{{--<img src="{{ asset('img/pb_1920x1800_back.jpg') }}" width="100%" height="auto" alt="" />--}}
 <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -2332,7 +2322,7 @@
             <li><a href="#videos">Видео</a></li>
             <li><a href="#tracks">Треки</a></li>
             <li><a href="#contacts">Контакты</a></li>
-            <li><a href="#pdf">Рейдер</a></li>
+            <li><a href="#pdf">Райдер</a></li>
         </ul>
         <div id="title-pic" class="title_icon">
             <a href="#"><img src="{{ asset('img/PB_WHITE-minwh.png') }}" width="100%" height="auto" alt=""/></a>
@@ -2400,285 +2390,272 @@
             </div>
         </div>
     </div>
+</div>
 
-    <section id="photos" class="photos">
-        <h2>Фото</h2>
-        <div class="container">
-            <div class="row">
+<section id="photos" class="photos">
+    <h2>Фото</h2>
+    <div class="container">
+        <div class="row">
 
-                @foreach($photos as $photo)
-                    <div class="col-md-4 img-sqr"><img alt="{{ $photo->name }}"
-                                                       src="{{ asset('storage/' . $photo->photo ) }}" class=""/></div>
-                @endforeach
+            @foreach($photos as $photo)
+                <div class="col-md-4 img-sqr"><img alt="{{ $photo->name }}"
+                                                   src="{{ asset('storage/' . $photo->photo ) }}" class=""/></div>
+            @endforeach
 
+        </div>
+    </div>
+</section>
+
+<section id="videos" class="videos">
+    <h2>Видео</h2>
+
+    <div class="container">
+        <div class="video-wrapper-slider">
+            <div id="slider" class="flexslider">
+                <ul class="slides">
+
+                    @foreach($videos as $video)
+                        <li>
+                            {!! $video->video !!}
+                        </li>
+                    @endforeach
+
+                </ul>
+            </div>
+            <div id="carousel" class="flexslider">
+                <ul class="slides">
+
+                    @foreach($videos as $video)
+                        <li>
+                            {!! $video->video !!}
+                        </li>
+                    @endforeach
+
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="videos" class="videos">
-        <h2>Видео</h2>
+<section id="tracks" class="tracks">
+    <h2>Треки</h2>
 
-        <div class="container">
-            <div class="video-wrapper-slider">
-                <div id="slider" class="flexslider">
-                    <ul class="slides">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tracks-wrapper-slider">
+                    <div id="tracks-slider" class="flexslider">
+                        <ul class="slides">
 
-                        @foreach($videos as $video)
-                            <li>
-                                {!! $video->video !!}
-                            </li>
-                        @endforeach
-
-                    </ul>
-                </div>
-                <div id="carousel" class="flexslider">
-                    <ul class="slides">
-
-                        @foreach($videos as $video)
-                            <li>
-                                {!! $video->video !!}
-                            </li>
-                        @endforeach
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tracks" class="tracks">
-        <h2>Треки</h2>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="tracks-wrapper-slider">
-                        <div id="tracks-slider" class="flexslider">
-                            <ul class="slides">
-
-                                @foreach($tracks as $track)
-                                    <li>
-                                        <div class="wrapper-track-item">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="track-wrapper-image">
-                                                        @if($track->preview)
-                                                            <img src="{{ asset('storage/' . $track->preview ) }}"
-                                                                 alt="raider_left.png">
-                                                        @else
-                                                            <img src="{{ asset('img/pb_1920x1800_back.png') }}"
-                                                                 alt="raider_left.png">
-                                                        @endif
-                                                    </div>
+                            @foreach($tracks as $track)
+                                <li>
+                                    <div class="wrapper-track-item">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="track-wrapper-image">
+                                                    @if($track->preview)
+                                                        <img src="{{ asset('storage/' . $track->preview ) }}"
+                                                             alt="raider_left.png">
+                                                    @else
+                                                        <img src="{{ asset('img/pb_1920x1800_back.png') }}"
+                                                             alt="raider_left.png">
+                                                    @endif
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="raider-wrapper-download flex-center">
-                                                        @if($track->date)
-                                                            <p class="raider-download-download">{{ $track->date }}</p>
-                                                        @endif
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="raider-wrapper-download flex-center">
+                                                    @if($track->date)
+                                                        <p class="raider-download-download">{{ $track->date }}</p>
+                                                    @endif
 
-                                                        @if($track->name)
-                                                            <p class="raider-download-head-text">{{ $track->name }}</p>
-                                                        @endif
+                                                    @if($track->name)
+                                                        <p class="raider-download-head-text">{{ $track->name }}</p>
+                                                    @endif
 
-                                                        @if($track->author)
-                                                            <p class="raider-download-knowing">{{ $track->author }}</p>
-                                                        @endif
+                                                    @if($track->author)
+                                                        <p class="raider-download-knowing">{{ $track->author }}</p>
+                                                    @endif
 
-                                                        @if($track->track && !$track->link)
-                                                            <div class="listen-wrapper-button">
-                                                                <div class="sample" data-duration="60"
-                                                                     data-showprogressbar="true" data-playtext=""
-                                                                     data-pausetext="" data-resumetext=""
-                                                                     data-src="{{ asset('storage/' . $track->track ) }}"></div>
-                                                            </div>
-                                                        @else
-                                                            <div class="listen-wrapper-button">
-                                                                <a target="_blank" href="{{ $track->link }}"
-                                                                   class="link">Слушать онлайн</a>
-                                                            </div>
-                                                        @endif
-                                                    </div>
+                                                    @if($track->track && !$track->link)
+                                                        <div class="listen-wrapper-button">
+                                                            <div class="sample" data-duration="60"
+                                                                 data-showprogressbar="true" data-playtext=""
+                                                                 data-pausetext="" data-resumetext=""
+                                                                 data-src="{{ asset('storage/' . $track->track ) }}"></div>
+                                                        </div>
+                                                    @else
+                                                        <div class="listen-wrapper-button">
+                                                            <a target="_blank" href="{{ $track->link }}"
+                                                               class="link">Слушать онлайн</a>
+                                                        </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
-                                    </li>
-                                @endforeach
+                                    </div>
+                                </li>
+                            @endforeach
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contacts" class="contacts">
-        <h2>Контакты</h2>
+<section id="contacts" class="contacts">
+    <h2>Контакты</h2>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="contacts-wrapper-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contacts-wrapper-info">
 
-                        @if(setting('site.mail'))
-                            <div class="contacts-info-item">
-                                <p class="contacts-item-title">Почта</p>
-                                <p class="contacts-item-info"><i class="fa fa-envelope"></i>
-                                    <a href="mailto:{{ setting('site.mail') }}"
-                                       target="_top">Написать</a>
-                                </p>
-                            </div>
-                        @endif
-
+                    @if(setting('site.mail'))
                         <div class="contacts-info-item">
-                            <p class="contacts-item-title">Телефон</p>
-
-
-                            @if(setting('site.phone'))
-                                <p class="contacts-item-info">
-                                    <i class="fa fa-phone"></i>
-                                    <a href="tel:{{ setting('site.phone') }}"
-                                       target="_top">{{ setting('site.phone') }}</a>
-                                </p>
-                            @endif
-
-
-                            @if(setting('site.phone_2'))
-                                <p class="contacts-item-info">
-                                    <i class="fa fa-phone"></i>
-                                    <a href="tel:{{ setting('site.phone_2') }}"
-                                       target="_top">{{ setting('site.phone_2') }}</a>
-                                </p>
-                            @endif
+                            <p class="contacts-item-title">Почта</p>
+                            <p class="contacts-item-info"><i class="fa fa-envelope"></i>
+                                <a href="mailto:{{ setting('site.mail') }}"
+                                   target="_top">Написать</a>
+                            </p>
                         </div>
+                    @endif
 
-                        @if(setting('site.facebook'))
-                            <div class="contacts-info-item">
-                                <p class="contacts-item-title">Facebook</p>
-                                <p class="contacts-item-info"><i class="fa fa-facebook-f"></i>
-                                    <a href="{{ setting('site.facebook') }}" target="_blank">Перейти</a>
-                                </p>
-                            </div>
+                    <div class="contacts-info-item">
+                        <p class="contacts-item-title">Телефон</p>
+
+
+                        @if(setting('site.phone'))
+                            <p class="contacts-item-info">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:{{ setting('site.phone') }}"
+                                   target="_top">{{ setting('site.phone') }}</a>
+                            </p>
+                        @endif
+
+
+                        @if(setting('site.phone_2'))
+                            <p class="contacts-item-info">
+                                <i class="fa fa-phone"></i>
+                                <a href="tel:{{ setting('site.phone_2') }}"
+                                   target="_top">{{ setting('site.phone_2') }}</a>
+                            </p>
                         @endif
                     </div>
+
+                    @if(setting('site.facebook'))
+                        <div class="contacts-info-item">
+                            <p class="contacts-item-title">Facebook</p>
+                            <p class="contacts-item-info"><i class="fa fa-facebook-f"></i>
+                                <a href="{{ setting('site.facebook') }}" target="_blank">Перейти</a>
+                            </p>
+                        </div>
+                    @endif
                 </div>
-                <div class="col-md-8">
-                    <div class="contacts-wrapper-map">
-                        <div class="contacts-wrapper-info-absolute">
-                            <div class="contacts-info-item">
-                                @if(setting('site.instagram'))
-                                    <p class="contacts-item-title">Instagram</p>
-                                    <p class="contacts-item-info"><i class="fa fa-instagram"></i>
-                                        <a href="{{ setting('site.instagram') }}" target="_blank">Перейти</a>
-                                    </p>
-                                @endif
-                            </div>
+            </div>
+            <div class="col-md-8">
+                <div class="contacts-wrapper-map">
+                    <div class="contacts-wrapper-info-absolute">
+                        <div class="contacts-info-item">
+                            @if(setting('site.instagram'))
+                                <p class="contacts-item-title">Instagram</p>
+                                <p class="contacts-item-info"><i class="fa fa-instagram"></i>
+                                    <a href="{{ setting('site.instagram') }}" target="_blank">Перейти</a>
+                                </p>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="pdf" class="raider">
-        <h2>Технический рейдер</h2>
+<section id="pdf" class="raider">
+    <h2>Райдер</h2>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="raider-wrapper-image">
-                        <img src="{{ asset('img/raider_left.png') }}" alt="raider_left.png">
-                        <div class="raider-download-pdf">PDF</div>
-                    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="raider-wrapper-image">
+                    <img src="{{ asset('img/raider_left.png') }}" alt="raider_left.png">
+                    <div class="raider-download-pdf">PDF</div>
                 </div>
-                <div class="col-md-6">
-                    <div class="raider-wrapper-download flex-center">
-                        <p class="raider-download-download">Загрузите наш</p>
-                        <p class="raider-download-head-text">технический рейдер</p>
-                        <p class="raider-download-knowing">для ознакомления с группой <span
-                                    class="fill-text">POCHEP BEAT</span></p>
+            </div>
+            <div class="col-md-6">
+                <div class="raider-wrapper-download flex-center">
+                    <p class="raider-download-download">Загрузите наш</p>
+                    <p class="raider-download-head-text">Райдер </p>
+                    <p class="raider-download-knowing">для ознакомления с группой <span
+                                class="fill-text">POCHEP BEAT</span></p>
 
-                        <div class="raider-download-wrapper-button">
-                            <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать
-                                PDF</a>
-                        </div>
+                    <div class="raider-download-wrapper-button">
+                        <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать
+                            PDF</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="col-md-12">
-            <div class="row"><img src="{{asset('img/PB_WHITE.png')}}" class="img-responsive"/></div>
-            <div class="row"><h2>Copyright 2018</h2></div>
-        </div>
-    </footer>
+<footer>
+    <div class="col-md-12">
+        <div class="row"><img src="{{asset('img/PB_WHITE.png')}}" class="img-responsive"/></div>
+        <div class="row"><h2>Copyright 2018</h2></div>
+    </div>
+</footer>
 
-    <div class="hidden"></div>
+<div class="hidden"></div>
 
-    <!--[if lt IE 9]>
-    <script src="libs/html5shiv/es5-shim.min.js"></script>
-    <script src="libs/html5shiv/html5shiv.min.js"></script>
-    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-    <script src="libs/respond/respond.min.js"></script>
-    <![endif]-->
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
 
-    <!-- Load CSS -->
-    <script>
-        function loadCSS(hf) {
-            var ms = document.createElement("link");
-            ms.rel = "stylesheet";
-            ms.href = hf;
-            document.getElementsByTagName("head")[0].appendChild(ms);
-        }
-
-        //    loadCSS("_header.css");
-        loadCSS("{{ asset('css/style.css') }}");
-        loadCSS("{{ asset('css/flexslider.css') }}");
-        loadCSS("{{ asset('css/jabradoodle.css') }}");
-    </script>
-
-    <!-- Load CSS compiled without Bootstrap & Header styles (after release) -->
-    <script>var ms = document.createElement("link");
+<!-- Load CSS -->
+<script>
+    function loadCSS(hf) {
+        var ms = document.createElement("link");
         ms.rel = "stylesheet";
-        // ms.href="compiled.min.css";document.getElementsByTagName("head")[0].appendChild(ms);
-    </script>
+        ms.href = hf;
+        document.getElementsByTagName("head")[0].appendChild(ms);
+    }
 
-    <!-- Load Scripts -->
-    <script>
-        var scr = {
-            "scripts": [
-                {"src": "{{ asset('js/modernizr.js') }}", "async": false},
-                {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
-                {"src": "{{ asset('js/jquery-migrate-3.0.0.min.js') }}", "async": false},
-                {"src": "{{ asset('js/bootstrap.min.js') }}", "async": false},
-                {"src": "{{ asset('js/jquery.scrollTo.min.js') }}", "async": false},
-                {"src": "{{ asset('js/jquery.flexslider-min.js') }}", "async": false},
-                {"src": "{{ asset('js/jabradoodle.js') }}", "async": false},
-                {"src": "{{ asset('js/common.js') }}", "async": false}
-            ]
-        };
-        !function (t, n, r) {
-            "use strict";
-            var c = function (t) {
-                if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
-                for (var r = 0; r < t.length; r++) {
-                    var c = n.createElement("script"), e = t[r];
-                    c.src = e.src, c.async = e.async, n.body.appendChild(c)
-                }
-                return !0
-            };
-            t.addEventListener ? t.addEventListener("load", function () {
-                c(r.scripts);
-            }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
-                c(r.scripts)
-            }) : t.onload = function () {
-                c(r.scripts)
+    loadCSS("{{ asset('css/style.css') }}");
+</script>
+
+<!-- Load Scripts -->
+<script>
+    var scr = {
+        "scripts": [
+            {"src": "{{ asset('js/jquery-3.3.1.min.js') }}", "async": false},
+            {"src": "{{ asset('js/jquery.flexslider-min.js') }}", "async": false},
+            {"src": "{{ asset('js/jquery.scrollTo.min.js') }}", "async": false},
+            {"src": "{{ asset('js/common.js') }}", "async": false}
+        ]
+    };
+    !function (t, n, r) {
+        "use strict";
+        var c = function (t) {
+            if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+            for (var r = 0; r < t.length; r++) {
+                var c = n.createElement("script"), e = t[r];
+                c.src = e.src, c.async = e.async, n.body.appendChild(c)
             }
-        }(window, document, scr);
-    </script>
-
+            return !0
+        };
+        t.addEventListener ? t.addEventListener("load", function () {
+            c(r.scripts);
+        }, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+            c(r.scripts)
+        }) : t.onload = function () {
+            c(r.scripts)
+        }
+    }(window, document, scr);
+</script>
 </body>
 </html>
