@@ -9,11 +9,19 @@
 <html lang="ru"> <!--<![endif]-->
 
 <head>
-
     <meta charset="utf-8">
+    <title>POCHEP BEAT</title>
+    <meta name="description" content="POCHEP BEAT">
+    <meta name="keywords" content="POCHEP BEAT">
+    <meta name="subject" content="We play music that we like first and foremost. Music that we can feel like our own, and bring these feelings to the viewer.">
+    <meta name="robots" content="index,follow" />
 
-    <title>Заголовок</title>
-    <meta name="description" content="">
+    <meta name="author" content="Stanislav Shiptya, shiptya@icloud.com">
+    <meta name="copyright" content="redbox.in.ua">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Bootstrap Grid v4.1.0 -->
     <style>
@@ -2276,9 +2284,6 @@
             window.localStorage && localStorage.font_css_cache || document.cookie.indexOf("font_css_cache") > -1 ? n() : e(window, "load", n)
         }();
     </script>
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
