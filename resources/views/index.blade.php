@@ -2483,7 +2483,7 @@
 
                                                     @if($track->track && !$track->link)
                                                         <div class="listen-wrapper-button">
-                                                            <div class="sample" data-duration="60"
+                                                            <div class="sample" data-duration="240"
                                                                  data-showprogressbar="true" data-playtext=""
                                                                  data-pausetext="" data-resumetext=""
                                                                  data-src="{{ asset('storage/' . $track->track ) }}"></div>
@@ -2591,9 +2591,10 @@
             <div class="col-md-6">
                 <div class="raider-wrapper-download flex-center">
                     <p class="raider-download-download">Загрузите наш</p>
-                    <p class="raider-download-head-text">технический райдер </p>
+                    <p class="raider-download-head-text">Райдер</p>
                     <p class="raider-download-knowing">для ознакомления с группой <span
                                 class="fill-text">POCHEP BEAT</span></p>
+                    <p class="raider-download-knowing">*райдер обсуждается индивидуально  в зависимости от формата выступления</p>
 
                     <div class="raider-download-wrapper-button">
                         <a href="{{ action('WelcomeController@downloadRaider') }}" class="raider-download-button">Скачать
