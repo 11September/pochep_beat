@@ -10,9 +10,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>POCHEP BEAT</title>
-    <meta name="description" content="POCHEP BEAT">
-    <meta name="keywords" content="POCHEP BEAT">
+    <title>{{ setting('site.title') }}</title>
+    <meta name="description" content="{{ setting('site.description') }}">
+    <meta name="keywords" content="{{ setting('site.keywords') }}">
     <meta name="subject" content="We play music that we like first and foremost. Music that we can feel like our own, and bring these feelings to the viewer.">
     <meta name="robots" content="index,follow" />
 
@@ -2309,6 +2309,9 @@
             document.getElementById('burger').style.display = 'block';
         }
     </script>
+
+
+    {{ setting('site.additional') }}
 
 </head>
 
