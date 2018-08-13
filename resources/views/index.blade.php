@@ -23,6 +23,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    {!! setting('site.additional') !!}
+
     <!-- Bootstrap Grid v4.1.0 -->
     <style>
         html {
@@ -2309,10 +2311,6 @@
             document.getElementById('burger').style.display = 'block';
         }
     </script>
-
-
-    {{ setting('site.additional') }}
-
 </head>
 
 <body>
